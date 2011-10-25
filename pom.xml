@@ -29,16 +29,6 @@
 		    <artifactId>jetty-webapp</artifactId>
 		    <version>7.4.5.v20110725</version>
 		</dependency>
-		<dependency>
-	      <groupId>org.eclipse.jetty</groupId>
-	      <artifactId>jetty-server</artifactId>
-	      <version>7.4.5.v20110725</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>org.eclipse.jetty</groupId>
-	      <artifactId>jetty-servlet</artifactId>
-	      <version>7.4.5.v20110725</version>
-	    </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -229,38 +219,6 @@
 		<finalName>HerokuSpringMVC</finalName>
 		<plugins>
 
-			<!-- Added after mvn archetype -->
-			<!--plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>exec-maven-plugin</artifactId>
-		        <version>1.2</version>
-		        <configuration>
-		          <mainClass>com.tquila.demo.server.WebStarter</mainClass>
-		        </configuration>
-		      </plugin>
-			<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>appassembler-maven-plugin</artifactId>
-                <version>1.1.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals><goal>assemble</goal></goals>
-                        <configuration>
-                            <assembleDirectory>target</assembleDirectory>
-                            <generateRepository>false</generateRepository>
-                            <programs>
-                                <program>
-                                    <mainClass>com.tquila.demo.server.WebStarter</mainClass>
-                                    <name>webapp</name>
-                                </program>
-                            </programs>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin-->
-			<!-- /Added after mvn archetype -->
-
 			<!-- Facilitates downloading source and javadoc in Eclipse -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -304,9 +262,7 @@
 				</configuration>
 			</plugin>
 			
-			
-
-
+			<!-- Added after mvn archetype -->
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-dependency-plugin</artifactId>
@@ -328,7 +284,8 @@
 			        </execution>
 			    </executions>
 			</plugin>
-
+			<!-- /Added after mvn archetype -->
+			
 		</plugins>
 	</build>
 </project>
