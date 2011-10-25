@@ -14,6 +14,7 @@
 		<slf4j.version>1.5.10</slf4j.version>
 		<java.version>1.5</java.version>
 		<junit.version>4.8.2</junit.version>
+		<aspectj.version>1.6.11</aspectj.version>
 	</properties>
 
 	<dependencies>
@@ -46,6 +47,21 @@
 		   <version>8.3-606.jdbc4</version>
 		   <scope>compile</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 		<!-- Added after mvn archetype -->
 
 		<!-- Bean Validation Dependencies -->
