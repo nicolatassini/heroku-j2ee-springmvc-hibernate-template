@@ -34,9 +34,9 @@
 		<property name="password" value="${db.password}" />
 	</bean>
 
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"-->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 
-	</bean>
+	</bean-->
 		
 
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
