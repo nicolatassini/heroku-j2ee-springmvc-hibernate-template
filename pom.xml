@@ -40,11 +40,15 @@
 		    <artifactId>jsp-2.1-glassfish</artifactId>
 		    <version>2.1.v20100127</version>
 		</dependency>
+		<dependency>
+		   <groupId>postgresql</groupId>
+		   <artifactId>postgresql</artifactId>
+		   <version>8.3-606.jdbc4</version>
+		   <scope>compile</scope>
+		</dependency>
 		<!-- Added after mvn archetype -->
 
-
 		<!-- Bean Validation Dependencies -->
-
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
@@ -66,12 +70,6 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>3.6.0.Final</version>
 			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>1.8.0.10</version>
 		</dependency>
 
 		<dependency>
@@ -186,7 +184,6 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-
 
 		<dependency>
 			<groupId>jstl</groupId>
