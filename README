@@ -8,7 +8,7 @@ Hibernate ORM 3.6
 PostgreSQL 8.3
 Maven 3
 Jetty 7.4.5
-Heroku
+Heroku Cedar
 
 Clone this project and build your own enterprise app.
 
