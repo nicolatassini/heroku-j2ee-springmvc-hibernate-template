@@ -3,7 +3,7 @@ Working Heroku Java/J2EE App
 ============================
 
 Basic integration between several frameworks, including:
-Spring MVC 3.0.5
+Spring MVC 3.1
 Hibernate ORM 3.6 
 PostgreSQL 8.3
 Maven 3
