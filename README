@@ -10,10 +10,5 @@ Maven 3
 Jetty 7.4.5
 Heroku Cedar
 
-Clone this project and build your own enterprise app.
-
-
-Live at: http://pure-light-6720.herokuapp.com/
-
-For comments and requests: https://twitter.com/#!/tquila_nik
-
+HOW TO USE? 
+http://javaonheroku.wordpress.com/2012/07/08/spring-mvc-with-hibernate-orm-on-heroku/
