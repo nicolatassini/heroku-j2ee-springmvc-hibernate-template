@@ -1,9 +1,9 @@
-package com.tquila.demo.dao;
+package com.template.demo.dao;
 
 import java.util.List;
 
-import com.tquila.demo.controller.DataInitializer;
-import com.tquila.demo.model.Person;
+import com.template.demo.controller.DataInitializer;
+import com.template.demo.model.Person;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

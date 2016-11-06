@@ -1,4 +1,4 @@
-package com.tquila.demo.model;
+package com.template.demo.model;
 
 import java.io.Serializable;
 

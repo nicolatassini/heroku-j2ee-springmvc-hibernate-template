@@ -1,4 +1,4 @@
-package com.tquila.demo.controller;
+package com.template.demo.controller;
 
 import junit.framework.Assert;
 

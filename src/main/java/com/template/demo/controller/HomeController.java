@@ -1,4 +1,4 @@
-package com.tquila.demo.controller;
+package com.template.demo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

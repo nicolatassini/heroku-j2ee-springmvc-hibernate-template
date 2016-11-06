@@ -9,6 +9,6 @@
 
 	<!-- Scans within the base package of the application for @Components to 
 		configure as beans -->
-	<context:component-scan base-package="com.tquila.demo" />
+	<context:component-scan base-package="com.template.demo" />
 	<tx:annotation-driven />
 </beans>

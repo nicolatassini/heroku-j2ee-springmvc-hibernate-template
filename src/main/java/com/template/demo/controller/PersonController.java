@@ -1,9 +1,9 @@
-package com.tquila.demo.controller;
+package com.template.demo.controller;
 
 import java.util.List;
 
-import com.tquila.demo.dao.PersonDao;
-import com.tquila.demo.model.Person;
+import com.template.demo.dao.PersonDao;
+import com.template.demo.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

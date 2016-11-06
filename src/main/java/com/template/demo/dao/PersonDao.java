@@ -1,11 +1,11 @@
-package com.tquila.demo.dao;
+package com.template.demo.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.tquila.demo.model.Person;
+import com.template.demo.model.Person;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

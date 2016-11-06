@@ -1,4 +1,4 @@
-package com.tquila.demo.controller;
+package com.template.demo.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.tquila.demo.model.Person;
+import com.template.demo.model.Person;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 

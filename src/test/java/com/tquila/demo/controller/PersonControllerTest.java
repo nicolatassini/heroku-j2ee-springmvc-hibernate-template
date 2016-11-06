@@ -1,4 +1,4 @@
-package com.tquila.demo.controller;
+package com.template.demo.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import com.tquila.demo.model.Person;
+import com.template.demo.model.Person;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
