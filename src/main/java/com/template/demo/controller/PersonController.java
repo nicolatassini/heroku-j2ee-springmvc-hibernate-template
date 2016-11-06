@@ -16,7 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/person/")
-public class PersonController {
+public class PersonController extends BaseController implements Serializable {
+
+	private static final long serialVersionUID = 1324281204513252405L;
 	
 	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
 

@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Sample controller for going to the home page with a message
  */
 @Controller
-public class HomeController {
+public class HomeController extends BaseController implements Serializable {
+
+	private static final long serialVersionUID = 1324281204513252404L;
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(HomeController.class);
