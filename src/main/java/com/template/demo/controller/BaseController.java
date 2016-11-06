@@ -19,7 +19,7 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 //@Scope("session")
-public class BaseController implements Serializable implements Serializable {
+public class BaseController implements Serializable {
 
 	private static final long serialVersionUID = 1324281204513252403L;
 	
