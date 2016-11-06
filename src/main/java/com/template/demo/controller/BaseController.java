@@ -1,4 +1,4 @@
-package com.template.controller;
+package com.template.demo.controller;
 
 import java.io.Serializable;
 import java.util.Map;
