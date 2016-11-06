@@ -23,7 +23,7 @@ public class BaseController implements Serializable {
 
 	private static final long serialVersionUID = 1324281204513252403L;
 	
-	private static final Logger logger = LoggerFactory.getLogger(FirstyController.class);
+	private static final Logger logger = LoggerFactory.getLogger(BaseController.class);
 	
 	
 	/**
