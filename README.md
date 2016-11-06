@@ -8,11 +8,20 @@
 * Maven 3
 * Tomcat 8.5 (or Jetty 9.3)
 
-#How to deploy it to Heroku?
+#How to deploy the project to Heroku?
 ```Bash
 git clone https://github.com/nicolatassini/heroku-j2ee-springmvc-hibernate-template.git
 cd heroku-j2ee-springmvc-hibernate-template
 heroku create
 git push heroku master
 heroku open
+```
+
+#How to run the project locally? (you have PostgreSQL running locally, with a "templateDB")
+```Bash
+git clone https://github.com/nicolatassini/heroku-j2ee-springmvc-hibernate-template.git
+cd heroku-j2ee-springmvc-hibernate-template
+export DATABASE_URL=postgres://nic:nic@localhost:5432/templateDB
+mvn package
+java -jar target/dependency/webapp-runner.jar target/*.war
 ```
