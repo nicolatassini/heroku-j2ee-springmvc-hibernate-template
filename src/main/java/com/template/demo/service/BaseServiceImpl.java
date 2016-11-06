@@ -24,8 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.template.demo.model.BaseEntity;
 import com.template.demo.model.User;
 
-import cz.jirutka.rsql.hibernate.RSQL2CriteriaConverter;
-import cz.jirutka.rsql.hibernate.RSQL2HibernateFactory;
+//import cz.jirutka.rsql.hibernate.RSQL2CriteriaConverter;
+//import cz.jirutka.rsql.hibernate.RSQL2HibernateFactory;
 
 /**
  * @author nicolatassini
@@ -101,25 +101,27 @@ public class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
     @SuppressWarnings("unchecked")
     @Transactional(readOnly=true)
     public List<T> findByQuery(int firstResult, int maxResults, String query) {
-    	if(StringUtils.isBlank(query)) {
-    		return this.findAll(firstResult,maxResults);
-    	} else {
-	    	try {
-	    		RSQL2HibernateFactory factory = RSQL2HibernateFactory.getInstance();
-	    		factory.setSessionFactory(entityManagerFactory.unwrap(SessionFactory.class));
+    	// if(StringUtils.isBlank(query)) {
+    	// 	return this.findAll(firstResult,maxResults);
+    	// } else {
+	    // 	try {
+	    // 		RSQL2HibernateFactory factory = RSQL2HibernateFactory.getInstance();
+	    // 		factory.setSessionFactory(entityManagerFactory.unwrap(SessionFactory.class));
 	
-	    		RSQL2CriteriaConverter converter = factory.createConverter();
-	    		DetachedCriteria detached = converter.createCriteria(query, type);
+	    // 		RSQL2CriteriaConverter converter = factory.createConverter();
+	    // 		DetachedCriteria detached = converter.createCriteria(query, type);
 	
-	    		Criteria criteria = detached.getExecutableCriteria(entityManager.unwrap(Session.class));
-	    		criteria.setFirstResult(firstResult);
-	    		criteria.setMaxResults(maxResults);
+	    // 		Criteria criteria = detached.getExecutableCriteria(entityManager.unwrap(Session.class));
+	    // 		criteria.setFirstResult(firstResult);
+	    // 		criteria.setMaxResults(maxResults);
 	
-	    		return criteria.list();
-	    	} catch(Exception e) {
-	    		throw new Exception("Something wrong in building RQL query", e, logger);
-	    	}
-    	}
+	    // 		return criteria.list();
+	    // 	} catch(Exception e) {
+	    // 		throw new Exception("Something wrong in building RQL query", e, logger);
+	    // 	}
+    	// }
+        // @TODO Fix this
+        return null;
     }
     
     /**
