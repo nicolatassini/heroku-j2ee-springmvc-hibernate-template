@@ -157,7 +157,7 @@
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
-			<version>${commons.version}</version>
+			<version>2.6</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency> 
