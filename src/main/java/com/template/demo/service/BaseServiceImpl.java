@@ -117,7 +117,7 @@ public class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
 	
 	    // 		return criteria.list();
 	    // 	} catch(Exception e) {
-	    // 		throw new Exception("Something wrong in building RQL query", e, logger);
+	    // 		throw new BaseException("Something wrong in building RQL query", e, logger);
 	    // 	}
     	// }
         // @TODO Fix this
