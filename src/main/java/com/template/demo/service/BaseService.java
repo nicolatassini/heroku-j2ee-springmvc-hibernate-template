@@ -1,13 +1,9 @@
-/**
- * 
- */
-package com.firsty.service;
+package com.template.demo.service;
 
 import java.util.List;
 
-import com.firsty.exception.FirstyRQLBuilderException;
-import com.firsty.model.FyEntity;
-import com.firsty.model.User;
+import com.template.demo.model.BaseEntity;
+import com.template.demo.model.User;
 
 
 /**
@@ -16,7 +12,7 @@ import com.firsty.model.User;
  * @author nicolatassini
  *
  */
-public interface FirstyService<T extends FyEntity> {
+public interface BaseService<T extends BaseEntity> {
 	
 	/**
 	 * Save a new object
@@ -84,6 +80,6 @@ public interface FirstyService<T extends FyEntity> {
      * @return
      * @throws FirstyRQLBuilderException 
      */
-    public List<T> findByQuery(int firstResult, int maxResults, String query) throws FirstyRQLBuilderException;
+    public List<T> findByQuery(int firstResult, int maxResults, String query) throws Exception;
 	
 }
