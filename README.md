@@ -14,4 +14,5 @@ git clone https://github.com/nicolatassini/heroku-j2ee-springmvc-hibernate-templ
 cd heroku-j2ee-springmvc-hibernate-template
 heroku create
 git push heroku master
+heroku open
 ```
