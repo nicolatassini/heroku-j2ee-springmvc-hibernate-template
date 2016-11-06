@@ -155,6 +155,14 @@
 		</dependency>
 
 		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency> 
+
+		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>1.1.2</version>
