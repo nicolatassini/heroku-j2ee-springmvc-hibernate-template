@@ -215,7 +215,7 @@
 				Jetty 
 				Procfile (remove space from the port argument)
 				web: java $JAVA_OPTS -jar target/dependency/jetty-runner.jar - -port $PORT target/*.war
-			- ->
+			-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -242,7 +242,7 @@
 				Tomcat 
 				Procfile (remove space from the port and the session arguments)
 				web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar - -port $PORT - -session-store memcache target/*.war
-			-->
+			- ->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
