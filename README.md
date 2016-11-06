@@ -10,10 +10,8 @@
 
 #How to deploy it to Heroku?
 ```Bash
-git clone this repo
-git init
-git add .
-git commit -m "init"
+git clone https://github.com/nicolatassini/heroku-j2ee-springmvc-hibernate-template.git
+cd heroku-j2ee-springmvc-hibernate-template
 heroku create
 git push heroku master
 ```
