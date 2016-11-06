@@ -1,6 +1,7 @@
 package com.template.demo.controller;
 
 import java.util.List;
+import java.io.Serializable;
 
 import com.template.demo.dao.PersonDao;
 import com.template.demo.model.Person;
