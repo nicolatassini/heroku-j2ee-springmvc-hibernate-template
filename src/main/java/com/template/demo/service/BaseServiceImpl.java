@@ -159,7 +159,6 @@ public class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
     public String getEntityName() {
     	if(entity == null) {
     		logger.error("Type is " + type);
-    		logger.error("Type is " + type);
     		Entity entityAnn = (Entity) type.getAnnotation(Entity.class);
             
             if (entityAnn != null && !entityAnn.name().equals("")) {
