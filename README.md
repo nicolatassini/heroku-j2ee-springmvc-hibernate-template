@@ -25,3 +25,6 @@ export DATABASE_URL=postgres://nic:nic@localhost:5432/templateDB
 mvn package
 java -jar target/dependency/webapp-runner.jar target/*.war
 ```
+
+#Required Add-Ons
+* MemCachier https://elements.heroku.com/addons/memcachier
