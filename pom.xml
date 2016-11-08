@@ -180,11 +180,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>spy</groupId>
-			<artifactId>spymemcached</artifactId>
-			<version>2.12.1</version>
-			<scope>provided</scope>
+		    <groupId>net.spy</groupId>
+		    <artifactId>spymemcached</artifactId>
+		    <version>2.12.1</version>
 		</dependency>
+
 
 		<!-- logging -->
 		<dependency>
@@ -238,15 +238,6 @@
 			<id>org.springframework.maven.milestone</id>
 			<name>Spring Maven Milestone Repository</name>
 			<url>http://maven.springframework.org/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spy</id>
-			<name>Spy Repository</name>
-			<layout>default</layout>
-			<url>http://files.couchbase.com/maven2/</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
