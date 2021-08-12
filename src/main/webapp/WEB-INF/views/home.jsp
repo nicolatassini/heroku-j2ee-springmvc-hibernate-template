@@ -5,7 +5,7 @@
 	<title>Home</title>
 </head>
 <body>
-<% @include file="header.jsp" %>
+<%@ include file="header.jsp" %>
 	${controllerMessage}<br/>
 <br/>
 <br/>
