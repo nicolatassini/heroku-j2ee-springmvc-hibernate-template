@@ -31,6 +31,10 @@ public class BaseController implements Serializable {
 	@ModelAttribute
 	public void addAttributes(Model model) {
 		model.addAttribute("userName", "Khanh");
+		model.addAttribute("titleShop", "KhanhPhuongShop");
+		model.addAttribute("facebookLink", "https://www.facebook.com/khanh9xkk");
+		model.addAttribute("youtubeLink", "https://www.youtube.com/?hl=vi");
+		model.addAttribute("promotion", "Khuyến mãi 50k cho đơn hàng đầu tiên");
 	}
 	
 	/**
