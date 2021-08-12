@@ -35,13 +35,13 @@
                         <div id="myCarousel" class="carousel slide cntr">
                            <div class="carousel-inner">
                               <div class="item active">
-                                 <a href="#"> <img src="assets/img/a.jpg" alt="" style="width:100%"></a>
+                                 <a href="#"> <img src="${pageContext.request.contextPath}/resources/assets/img/a.jpg" alt="" style="width:100%"></a>
                               </div>
                               <div class="item">
-                                 <a href="#"> <img src="assets/img/b.jpg" alt="" style="width:100%"></a>
+                                 <a href="#"> <img src="${pageContext.request.contextPath}/resources/assets/img/b.jpg" alt="" style="width:100%"></a>
                               </div>
                               <div class="item">
-                                 <a href="#"> <img src="assets/img/e.jpg" alt="" style="width:100%"></a>
+                                 <a href="#"> <img src="${pageContext.request.contextPath}/resources/assets/img/e.jpg" alt="" style="width:100%"></a>
                               </div>
                            </div>
                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
