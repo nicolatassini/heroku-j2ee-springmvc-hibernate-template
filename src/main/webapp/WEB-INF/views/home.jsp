@@ -18,9 +18,9 @@
 <body>
     <div class="container">
     <div id="gototop"> </div>
-    <%@ include file="common/upper_header.jsp" %>
-    <%@ include file="common/lower_header.jsp" %>
-    <%@ include file="common/navbar.jsp" %>
+    <%@ include file="/common/upper_header.jsp" %>
+    <%@ include file="/common/lower_header.jsp" %>
+    <%@ include file="/common/navbar.jsp" %>
 
 <!--
 Body Section
