@@ -36,7 +36,7 @@ public class HomeController extends BaseController implements Serializable {
 	}
 	
 	@RequestMapping(value = "/fake/cate", method = RequestMethod.GET)
-	public String home(Model model) {
+	public String fakeCate(Model model) {
 		categoryDao.save(new Category(1, "Bánh ngọt"));
 		categoryDao.save(new Category(2, "Đồ gia dụng"));
 		categoryDao.save(new Category(3, "Quần áo"));
