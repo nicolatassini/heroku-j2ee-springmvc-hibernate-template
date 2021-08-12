@@ -1,7 +1,6 @@
 package com.template.demo.dao;
 
 import com.template.demo.model.Category;
-import com.template.demo.model.Person;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,8 +19,8 @@ public class CategoryDao {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Category> getPeople() {
-		return entityManager.createQuery("select c from Category p").getResultList();
+	public List<Category> getCategories() {
+		return entityManager.createQuery("select c from Category c").getResultList();
 	}
 	
 	@Transactional
