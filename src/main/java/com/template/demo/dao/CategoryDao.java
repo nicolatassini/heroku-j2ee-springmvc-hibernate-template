@@ -25,7 +25,7 @@ public class CategoryDao {
 	}
 	
 	@Transactional
-	public Person save(Category category) {
+	public Category save(Category category) {
 		if (category.getId() == null) {
 			entityManager.persist(category);
 			return category;
