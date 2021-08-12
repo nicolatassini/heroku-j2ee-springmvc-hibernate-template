@@ -1,0 +1,110 @@
+body{background:url(assets/img/white_leather.png) repeat 0 0; }
+#header{padding:8px 0 8px;}
+#header a{text-decoration:none}
+#header p{padding:0; margin:0; line-height:1em; font-size:100%}
+#header h1{margin:0;line-height:1em }
+#header h1.dotmark{line-height:1.5em;}
+#header{ padding-top:44px;}
+.logo {padding-top: 11px;display: block;}
+.logo span{display:none}
+.dotmark{padding:4px; font-size:14px; line-height:1.5em;  background:#fff; border:1px dashed rgb(252, 111, 0); margin:0; color:rgb(252, 111, 0); position:relative;}
+.dotmark:hover{ border:1px dashed #fff; color:#fff; background:rgb(252, 111, 0);}
+.dotmark i{position:absolute; left:10%; top:-12px; font-size:21px;}
+.offerNoteWrapper{border:6px solid #fff; margin: 6px;}
+.offerNoteWrapper:hover{border-color:rgb(252, 111, 0);}
+h3 {font-size: 18px;line-height: 1.5em;}
+hr.soften {margin: 8px 0;background: #DDD;}
+.moreOptopm.carousel .carousel-control,.moreOptopm.carousel .carousel-control:hover {background:transparent; }
+.moreOptopm.carousel .carousel-control {border: 0; top: 50%; bottom: 0;}
+.moreOptopm.carousel .carousel-control.right, .moreOptopm.carousel .carousel-control.right:hover {right:0; }
+.moreOptopm.carousel .carousel-control.left, .moreOptopm.carousel .carousel-control.left:hover {left:0; }
+.moreOptopm.carousel .carousel-control, .moreOptopm.carousel .carousel-control:hover {color: #000;}
+.homCar{overflow:hidden;}
+.navbar .brand {padding: 0px 20px 0;font-size: 37px;color: black;}
+.spaceBtm{padding-bottom:8px}
+#myCarousel.homCar .item img{width:100%; max-height:400px}
+#myCarousel .btn {border: 0 none;border-radius: 0 0 0 0;bottom: 49px;font-size: 18px;line-height: 42px;padding: 0 28px;position: absolute;right: 0;text-shadow: 0 0 0 transparent;}	
+#myCarousel{position:relative; margin: 0;}
+.navbar-inner {padding-left: 0;padding-right: 0;}
+.thumbnail .btn{ border-radius: 0 0 0 0;}
+.thumbnail h4{line-height:42px}
+.thumbnail img{ max-width:100%}
+.thumbnail:hover {border: 1px solid #CACACA;}
+.form-horizontal.qtyFrm .control-label{text-align: left;}
+.form-horizontal.qtyFrm .control-label span{font-size:18px}
+.clr{clear:both;}
+.moreOptopm.carousel .item img{padding:2px; border:1px solid #ddd}
+.moreOptopm.carousel .item img:hover{ border:1px solid pink}
+.carousel .item > img {display:inline;}
+.moreOptopm{min-height:116px}
+#productDetail {margin-bottom:0}
+.tabWrapper{background:#fff; padding:14px; border:1px solid #ddd; border-top:0}
+#productView .btn-toolbar{padding-left:3px;}
+.carousel-control {border: 0px; border-radius:2px}
+.carousel-control, .carousel-control:hover {background:rgba(248, 118, 16, 1); height:43px; line-height:34px; color: #fff;}
+.carousel-control {top: 50%;}
+.homCar h4 {background-color: #eb4800; color: #fff;padding: 11px 4px;font-size: 26px;text-transform: uppercase;float: left;width: auto;-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';opacity: 0.8;}
+.homCar p span{background-color: #fff;color: #000;padding: 2px 10px;line-height: 30px;font-size: 28px;float: left;width: auto;opacity: 0.8;-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';}
+.carousel-control.left{left: -15600px;}
+.carousel-control.right{right: -15600px;}
+.carousel:hover .carousel-control.right{right: 8px; left: auto;}
+.carousel:hover .carousel-control.left{left: 8px;}
+.alignR{text-align:right;}
+.control-label.alignL, .alignL{text-align:left;}
+.loginFrm{ margin-bottom:8px;}
+.loginFrm .control-group{padding:8px 14px 0; margin-bottom:0 }
+.navbar .pull-right > li > .dropdown-menu, .navbar .nav > li > .dropdown-menu.pull-right {right: 0;left: auto;border-radius: 0; border-color: #ccc;}
+.navbar .nav , .marginLess{margin:0}
+.navbar-search .search-query {padding: 4px 14px;-moz-border-radius: 1px;-webkit-border-radius: 1px;border-radius: 1px;line-height: 1.5em; min-width: 200px;}
+.navbar-search{margin-left:6px;}
+.actionList a{width:50%; font-size:11px; color:#444}
+.caption p{margin:0}
+.caption h4{margin:0}
+.thumbnail .caption {padding: 9px;color: #555555;background: #F3F2F2;}
+.footer {background-color:#222; color:#eee; padding: 28px 8px 18px; margin-top: 18px;}
+.footer a{color:#bbb; font-size:12px;}
+.copyright {clear: both; padding: 8px; border-top: 1px solid #CCC; font-size: 13px; background: #f2f2f2; box-shadow: 0 0 3px #B1AFAF;}
+.topNav{padding: 0;border-bottom: 1px solid #CCC;background: #f2f2f2;box-shadow: 0 0 3px #B1AFAF;}
+.topNav a{color:#333; font-size:12px; font-weight:bold; display:inline-block;  padding:8px 4px;}
+.topNav a:hover, .topNav a.active{color:#fff; background:#f89406; text-decoration:none}
+.socialNw a{width:24px; height:24px; line-height:24px; display:inline-block; padding:3px; margin-top:3px; font-size:21px; border-radius:50%; background:#999; color:#fff; text-align:center; }
+.cntr{text-align:center}
+.cart{border:1px solid #ddd;  }
+#sidebar ul {margin: 0;padding: 0;}
+#sidebar .alert {padding: 8px;}
+#sidebar .nav a{color:#000}
+#sidebar .nav a:hover{color:#f89406}
+#sidebar .cart{border:1px solid #B94A48; }
+#sidebar h4{margin:0;  line-height:1.5em; padding:0 13px;  }
+#sidebar h2{font-size:21px; line-height:21px;}
+#sidebar a.defaultBtn:hover, .defaultBtn:hover{color:#fff; text-decoration:none; background:#333}
+#sidebar .nav a.zoomTool{color:#fff} 
+.thumbnail>a{display:block; text-align:center}
+.carousel-caption {background: transparent;background: transparent;}
+#compairTbl td{text-align:center;}
+.justify{text-align:justify;}
+.table td[align=right] {text-align: right;}
+.thumbnail h5,.thumbnail p{text-align:center}
+.bs-docs-sidenav > li > a {border: 0; border-bottom:1px solid #e5e5e5;}
+.thumbnail{position:relative;}
+.tag {background:url(assets/img/new.png) no-repeat 0 0; position: absolute; display:block; top: -4px;right: -18px; height:48px; width:48px;}
+.np{padding:0}
+.totalInCart{line-height:26px;}
+.absoluteBlk{position:absolute; left:8px; top:8px; width:45%; }
+.relative{position:relative}
+.socialMedia .on, .socialMedia:hover .off{display:block}
+.socialMedia .off, .socialMedia:hover .on{display:none}
+#newProductCar .carousel-control {position: absolute;top: -48px;width: 24px;height: 24px;margin-top: 0;font-size: 16px;font-weight: bold;line-height: 1.5em;color: #ffffff;text-align: center;background: #FFA300;border: 0;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+#newProductCar .carousel-control.right {right: 8px; left: auto;}
+#newProductCar .carousel-control.left {right: 38px; left: auto;}
+#newProductCar{margin-bottom:0}
+.zoomTool{width:120px; height:34px; font-size:14px; font-weight:bold; line-height:34px; text-align:center; color:#fff; border-radius:2px; background:#f89406; position:absolute; left:50%; top:44%; margin-left:-60px; z-index:999; display:none}.thumbnail{background:#fff}
+.zoomTool:hover{color:#fff; text-decoration:none; }
+.thumbnail>a.overlay, .thumbnail>a.zoomTool {display:none;}
+.shopBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;color: #fff;border-radius: 2px;background: #f89406;display:inline-block;padding:0 12px;border:0;}
+.defaultBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;border-radius: 2px;display:inline-block;padding:0 12px;color: #666;text-decoration: none;background: #e6e6e6;border:0;}
+.shopBtn:hover {color: #fff; text-decoration:none; background:#F86706}
+.gotop {background-color: #000000;display: none;position: fixed;bottom: 30px;right: 30px;padding: 0px 10px 5px;color: #fff;text-decoration: none;font-size: 30px;line-height: 34px;}
+.gotop:hover {color: #fff;text-decoration: none;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
+#gototop{margin-top:1px;}
+#footerMenu a{ font-size:12px; text-transform:lowercase}
