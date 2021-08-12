@@ -39,7 +39,7 @@ public class HomeController extends BaseController implements Serializable {
 	public String homecate(Model model) {
 		Category category = new Category();
 		category.setName("Thể thao");
-		categoryDao.save(new Category());
+		categoryDao.save(category);
 		return "home";
 	}
 	
