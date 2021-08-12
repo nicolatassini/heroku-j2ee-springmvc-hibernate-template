@@ -18,15 +18,15 @@
    <body>
       <div class="container">
          <div id="gototop"> </div>
-         <%@ include file="../common/upper_header.jsp" %>
-         <%@ include file="../common/lower_header.jsp" %>
-         <%@ include file="../common/navbar.jsp" %>
+         <%@ include file="common/upper_header.jsp" %>
+         <%@ include file="common/lower_header.jsp" %>
+         <%@ include file="common/navbar.jsp" %>
          <!--
             Body Section
             -->
          <div class="row">
             <div id="sidebar" class="span3">
-                <%@ include file="../common/left_site.jsp" %>
+                <%@ include file="common/left_site.jsp" %>
             </div>
             <div class="span9">
                <div class="well np">
