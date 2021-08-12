@@ -1,5 +1,6 @@
 package com.template.demo.controller;
 
+import com.template.demo.dao.CategoryDao;
 import java.io.Serializable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,9 @@ public class HomeController extends BaseController implements Serializable {
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(HomeController.class);
+	
+	@Autowired
+	private CategoryDao categoryDao;
 
 	/**
 	 * Selects the home page and populates the model with a message
