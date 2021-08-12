@@ -1,5 +1,6 @@
 package com.template.demo.controller;
 
+import com.template.demo.model.Category;
 import com.template.demo.dao.CategoryDao;
 import java.io.Serializable;
 import org.slf4j.Logger;
@@ -31,6 +32,14 @@ public class HomeController extends BaseController implements Serializable {
 		logger.info("Welcome home!");
 		model.addAttribute("controllerMessage",
 				"This is the message from the controller!");
+		return "home";
+	}
+	
+	@RequestMapping(value = "/category", method = RequestMethod.GET)
+	public String home(Model model) {
+		Category category = new Category();
+		category.setName("Thể thao");
+		categoryDao.save(new Category());
 		return "home";
 	}
 	
