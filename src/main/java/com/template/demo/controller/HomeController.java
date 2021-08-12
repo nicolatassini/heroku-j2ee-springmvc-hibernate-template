@@ -36,7 +36,7 @@ public class HomeController extends BaseController implements Serializable {
 	}
 	
 	@RequestMapping(value = "/category", method = RequestMethod.GET)
-	public String home(Model model) {
+	public String homecate(Model model) {
 		Category category = new Category();
 		category.setName("Thể thao");
 		categoryDao.save(new Category());
