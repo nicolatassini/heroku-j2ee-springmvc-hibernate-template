@@ -5,10 +5,8 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world! - 
-</h1>
-${controllerMessage}<br/>
+<% @include file="header.jsp" %>
+	${controllerMessage}<br/>
 <br/>
 <br/>
 <a href="person/list">Go to the person list</a>
