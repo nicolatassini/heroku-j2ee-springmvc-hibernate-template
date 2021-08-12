@@ -23,13 +23,10 @@ public class Person implements Serializable {
 	@Column
 	private String lastName;
 
-	public Person() {
-	}
+	@Column
+	private Long age;
 
-	public Person(String firstName, String lastName) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public Person() {
 	}
 
 	public Long getId() {
@@ -56,50 +53,23 @@ public class Person implements Serializable {
 		this.lastName = lastName;
 	}
 
-	@Override
-	public String toString() {
-
-		return super.toString() + " name = " + firstName + " " + lastName
-				+ " id = " + id;
+	public Long getAge() {
+		return age;
 	}
 
-	@Override
+	public void setAge(Long age) {
+		this.age = age;
+	}
+
+	public boolean equals(Object object) {
+		if (this == object) return true;
+		if (object == null || getClass() != object.getClass()) return false;
+		if (!super.equals(object)) return false;
+		Person person = (Person) object;
+		return java.util.Objects.equals(id, person.id) && java.util.Objects.equals(firstName, person.firstName) && java.util.Objects.equals(lastName, person.lastName) && java.util.Objects.equals(age, person.age);
+	}
+
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result
-				+ ((firstName == null) ? 0 : firstName.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result
-				+ ((lastName == null) ? 0 : lastName.hashCode());
-		return result;
+		return java.util.Objects.hash(super.hashCode(), id, firstName, lastName, age);
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Person other = (Person) obj;
-		if (firstName == null) {
-			if (other.firstName != null)
-				return false;
-		} else if (!firstName.equals(other.firstName))
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (lastName == null) {
-			if (other.lastName != null)
-				return false;
-		} else if (!lastName.equals(other.lastName))
-			return false;
-		return true;
-	}
-
 }
