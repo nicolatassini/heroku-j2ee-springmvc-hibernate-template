@@ -55,6 +55,11 @@ public class Category extends BaseEntity implements Serializable {
      */
     public Category() {
     }
+	
+	public Category(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 	/**
 	 * @see Object#hashCode()
