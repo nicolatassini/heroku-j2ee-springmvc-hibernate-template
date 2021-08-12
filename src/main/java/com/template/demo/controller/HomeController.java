@@ -33,7 +33,7 @@ public class HomeController extends BaseController implements Serializable {
 		logger.info("Welcome home!");
 		List<Category> categoryList = categoryDao.getCategories();
 		for (Category category : categoryList) {
-			System.out.println(category.getName());
+			logger.info(category.getName());
 		}
 		model.addAttribute("categoryList", categoryList);
 		return "home";
