@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,115 +16,26 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/ico/favicon.ico">
 </head>
 <body>
-<!--
-	Upper Header Section
--->
-<div class="navbar navbar-inverse navbar-fixed-top">
-	<div class="topNav">
-		<div class="container">
-			<div class="alignR">
-				<div class="pull-left socialNw">
-					<a href="${facebookLink}"><span class="icon-facebook"></span></a>
-					<a href="${youtubeLink}"><span class="icon-youtube"></span></a>
-				</div>
-				<a class="active" href="/"> <span class="icon-home"></span> Home</a>
-				<a href="#"><span class="icon-user"></span> My Account</a>
-				<a href="cart"><span class="icon-shopping-cart"></span> 2 Item(s) - <span class="badge badge-warning"> 200.000 VND</span></a>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="container">
+    <div id="gototop"> </div>
+    <%@ include file="common/upper_header.jsp" %>
+    <%@ include file="common/lower_header.jsp" %>
+    <%@ include file="common/navbar.jsp" %>
 
-<!--
-Lower Header Section
--->
-<div class="container">
-<div id="gototop"> </div>
-<header id="header">
-<div class="row">
-	<div class="span4">
-	<h1>
-	<a class="logo" href="index.html">
-		<img src="${pageContext.request.contextPath}/resources/img/logo-bootstrap-shoping-cart.png" alt="bootstrap sexy shop">
-	</a>
-	</h1>
-	</div>
-	<div class="span4">
-	<div class="offerNoteWrapper">
-	<h1 class="dotmark">
-	<i class="icon-cut"></i>
-	${promotion}
-	</h1>
-	</div>
-	</div>
-	<div class="span4 alignR">
-	<p><br> <strong> Support (24/7) :  0989 912 304 </strong><br><br></p>
-	</div>
-</div>
-</header>
-
-<!--
-Navigation Bar Section
--->
-<div class="navbar">
-	  <div class="navbar-inner">
-		<div class="container">
-		  <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </a>
-		  <div class="nav-collapse">
-			<ul class="nav">
-			  <li class="active"><a href="/">Home	</a></li>
-			  <li class=""><a href="list-view.html">List View</a></li>
-			  <li class=""><a href="grid-view.html">Grid View</a></li>
-			  <li class=""><a href="three-col.html">Three Column</a></li>
-			  <li class=""><a href="four-col.html">Four Column</a></li>
-			  <li class=""><a href="general.html">General Content</a></li>
-			</ul>
-			<form action="#" class="navbar-search pull-left">
-			  <input type="text" placeholder="Search" class="search-query span2">
-			</form>
-			<ul class="nav pull-right">
-			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
-				<div class="dropdown-menu">
-				<form class="form-horizontal loginFrm">
-				  <div class="control-group">
-					<input type="text" class="span2" id="inputEmail" placeholder="Email">
-				  </div>
-				  <div class="control-group">
-					<input type="password" class="span2" id="inputPassword" placeholder="Password">
-				  </div>
-				  <div class="control-group">
-					<label class="checkbox">
-					<input type="checkbox"> Remember me
-					</label>
-					<button type="submit" class="shopBtn btn-block">Sign in</button>
-				  </div>
-				</form>
-				</div>
-			</li>
-			</ul>
-		  </div>
-		</div>
-	  </div>
-	</div>
 <!--
 Body Section
 -->
 	<div class="row">
-		<div id="sidebar" class="span3">
-			<div class="well well-small">
-						<ul class="nav nav-list">
-						    <c:forEach items="${categoryList}" var="v_cate">
-							<li><a href="edit?id=${v_person.id}"><span class="icon-chevron-right"></span>${v_cate.name}</a></li>
-						    </c:forEach>
-						</ul>
-			</div>
+<div id="sidebar" class="span3">
+            <div class="well well-small">
+                <ul class="nav nav-list">
+                    <c:forEach items="${categoryList}" var="v_cate">
+                        <li><a href="edit?id=${v_person.id}"><span class="icon-chevron-right"></span>${v_cate.name}</a></li>
+                    </c:forEach>
+                </ul>
+            </div>
 
-<!-- 			  <div class="well well-small alert alert-warning cntr">
+			  <div class="well well-small alert alert-warning cntr">
 				  <h2>50% Discount</h2>
 				  <p>
 					 only valid for online order. <br><br><a class="defaultBtn" href="#">Click here </a>
@@ -166,7 +76,7 @@ Body Section
 				</div>
 			  </div>
 			</li>
-		  </ul> -->
+		  </ul>
 
 	</div>
 	<div class="span9">
