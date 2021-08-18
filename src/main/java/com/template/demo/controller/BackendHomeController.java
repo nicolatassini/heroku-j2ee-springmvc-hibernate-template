@@ -49,7 +49,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 * Selects the home page and populates the model with a message
 	 */
 	@RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
-	public String categoryDetail(Model model, @PathVariable Long id) {
+	public String categoryDetail(Model model, @PathVariable Integer id) {
 		logger.info("====> [Backend] Category detail page!!");
 		Category category = categoryDao.find(id);
 		model.addAttribute("category", category);
