@@ -31,7 +31,16 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 */
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String home(Model model) {
-		logger.info("====> [Backend] Welcome admin home!");
+		logger.info("====> [Backend] Home page!");
 		return "backend/backend";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/category", method = RequestMethod.GET)
+	public String home(Model model) {
+		logger.info("====> [Backend] Category page!!");
+		return "backend/category";
 	}
 }
