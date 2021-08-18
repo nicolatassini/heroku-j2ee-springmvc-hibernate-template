@@ -8,8 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.*;
 /**
  * Sample controller for going to the home page with a message
@@ -44,5 +43,16 @@ public class BackendHomeController extends BaseController implements Serializabl
 		List<Category> categoryList = categoryDao.getCategories();
 		model.addAttribute("categoryList", categoryList);
 		return "backend/category";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
+	public String categoryDetail(Model model, @PathVariable String id) {
+		logger.info("====> [Backend] Category detail page!!");
+		Category category = categoryDao.find(id);
+		model.addAttribute("category", category);
+		return "backend/categoryDetail";
 	}
 }
