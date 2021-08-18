@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <html>
    <head>
       <meta charset="utf-8">
@@ -38,40 +39,37 @@
 										<tr>
 											<th style="width:25%;">Mã loại hàng</th>
 											<th>Tên loại hàng</th>
-											<th class="text-right">Action</th>
+											<th>Trạng thái</th>
+											<th class="text-right">Hoạt động</th>
 										</tr>
 									</thead>
 									<tbody>
+										<c:forEach items="${categoryList}" var="v_cate">
 										<tr>
 											<td>
-												<img class="rounded-circle" src="${pageContext.request.contextPath}/resources/assets/img/user.jpg" height="28" width="28" alt=""> John Doe
+												${v_cate.id}
 											</td>
-											<td>FT-0001</td>
-											<td>johndoe@example.com</td>
-											<td>1 Jan 2013</td>
+											<td>${v_cate.name}</td>
 											<td>
 												<div class="dropdown">
-													<a href="#" class="custom-badge status-grey dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nurse</a>
+													<a href="#" class="custom-badge status-grey dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Hoạt động</a>
 													<div class="dropdown-menu">
-														<a class="dropdown-item" href="#">Laboratorist</a>
-														<a class="dropdown-item" href="#">Pharmacist</a>
-														<a class="dropdown-item" href="#">Accountant</a>
-														<a class="dropdown-item" href="#">Receptionist</a>
+														<a class="dropdown-item" href="#">Không hoạt động</a>
 													</div>
 												</div>
 											</td>
-											<td>$59698</td>
-											<td><a class="btn btn-sm btn-primary" href="salary-view.html">Generate Slip</a></td>
+											
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<div class="dropdown-menu dropdown-menu-right">
-														<a class="dropdown-item" href="edit-salary.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+														<a class="dropdown-item" href="edit-salary.html"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
+														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
 													</div>
 												</div>
 											</td>
 										</tr>
+									</c:forEach>
 									</tbody>
 								</table>
 							</div>
