@@ -53,6 +53,6 @@ public class BackendHomeController extends BaseController implements Serializabl
 		logger.info("====> [Backend] Category detail page!!");
 		Category category = categoryDao.find(id);
 		model.addAttribute("category", category);
-		return "backend/categoryDetail";
+		return "backend/category-detail";
 	}
 }
