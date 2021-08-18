@@ -41,6 +41,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@RequestMapping(value = "/category", method = RequestMethod.GET)
 	public String category(Model model) {
 		logger.info("====> [Backend] Category page!!");
+		List<Category> categoryList = categoryDao.getCategories();
 		model.addAttribute("categoryList", categoryList);
 		return "backend/category";
 	}
