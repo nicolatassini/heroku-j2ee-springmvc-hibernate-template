@@ -14,7 +14,7 @@ public class CategoryDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public Category find(Long id) {
+	public Category find(Integer id) {
 		return entityManager.find(Category.class, id);
 	}
 	
