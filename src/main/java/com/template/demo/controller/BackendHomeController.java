@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.*;
  * Sample controller for going to the home page with a message
  */
 @Controller
+@RequestMapping("/admin")
 public class BackendHomeController extends BaseController implements Serializable {
 
 	private static final long serialVersionUID = 1324281204513252404L;
@@ -28,9 +29,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
-	@RequestMapping(value = "/admin/", method = RequestMethod.GET)
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String home(Model model) {
-		logger.info("Welcome admin home!");
+		logger.info("====> [Backend] Welcome admin home!");
 		return "backend/backend";
 	}
 }
