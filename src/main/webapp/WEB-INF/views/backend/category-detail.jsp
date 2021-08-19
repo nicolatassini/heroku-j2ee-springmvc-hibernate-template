@@ -76,7 +76,7 @@
 			  $(".saveCate").click(function(){
 				    $.ajax({
 				     type: "PUT",
-				     url: "${pageContext.request.contextPath}/admin/api/category?id="+$('#category-id').val()+"&name="+$('#category-id').val(),
+				     url: "${pageContext.request.contextPath}/admin/api/category?id="+$('#category-id').val()+"&name="+$('#category-name').val(),
 // 				     data: JSON.stringify(data),
 // 				     contentType: "application/json; charset=utf-8",
 // 				     crossDomain: true,
