@@ -62,8 +62,10 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 */
 	@RequestMapping(value = "/api/category", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public Category updateCategory(@ModelAttribute Category category) {
-		logger.info("====> [Backend] Update category" +  category.toString());
+	public Category updateCategory(@RequestParam String name, @RequestParam Integer id) {
+		Category category = new Category();
+		category.setId(id);
+		category.setName(name);
 		return categoryDao.save(category);
 	}
 	
