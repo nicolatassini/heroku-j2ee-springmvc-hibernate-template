@@ -60,7 +60,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
-	@RequestMapping(value = "/api/category", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/api/category", method = RequestMethod.PUT, produces="application/json")
 	@ResponseBody
 	public Category updateCategory(@RequestParam Long abc) {
 		logger.info("====> [Backend] Category update: " + abc);
