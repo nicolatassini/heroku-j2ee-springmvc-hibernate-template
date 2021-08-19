@@ -64,9 +64,6 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@ResponseBody
 	public Category updateCategory(@RequestBody Category category) {
 		logger.info("====> [Backend] Category update: " + category.toString);
-		Category category = new Category();
-		category.setId(id);
-		category.setName(name);
 		return categoryDao.save(category);
 	}
 	
