@@ -85,7 +85,7 @@
 							<img src="${pageContext.request.contextPath}/resources/assets/img/sent.png" alt="" width="50" height="46">
 							<h3>Bạn có muốn xoá thể loại này không</h3>
 							<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Không</a>
-								<button type="submit" class="btn btn-danger">Có</button>
+								<button type="submit" class="btn btn-danger delete_category_submit">Có</button>
 							</div>
 						</div>
 					</div>
@@ -101,17 +101,16 @@
 				 });
 				
 				
-			  $(".saveCate").click(function(){
+			  $(".delete_category_submit").click(function(){
+				  
 				    $.ajax({
-				     type: "POST",
-				     url: "http://example.com",
-				     data: JSON.stringify(data),
+				     type: "DELETE",
+				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-id"),
 				     contentType: "application/json; charset=utf-8",
 				     crossDomain: true,
 				     dataType: "json",
 				     success: function (data, status, jqXHR) {
-
-					 alert(success);
+					alert(data);
 				     },
 
 				     error: function (jqXHR, status) {
