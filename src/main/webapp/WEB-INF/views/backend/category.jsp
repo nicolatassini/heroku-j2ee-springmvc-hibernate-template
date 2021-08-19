@@ -109,7 +109,7 @@
 // 				     crossDomain: true,
 // 				     dataType: "json",
 				     success: function (data, status, jqXHR) {
-					alert(data);
+					location.reload();
 				     },
 				     error: function (jqXHR, status) {
 					 console.log(jqXHR);
