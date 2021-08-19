@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.http.*;
 /**
  * Sample controller for going to the home page with a message
  */
@@ -59,9 +60,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
-	@RequestMapping(value = "/api/category", method = RequestMethod.PUT)
+	@RequestMapping(value = "/api/category", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public Category updateCategory(Model model, @RequestBody Category category) {
+	public Category updateCategory(Model model, @ModelAttribute Category category) {
 		logger.info("====> [Backend] Update category" +  category.toString());
 		return categoryDao.save(category);
 	}
