@@ -62,9 +62,9 @@
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-													<div class="dropdown-menu dropdown-menu-right">
+													<div class="dropdown-menu dropdown-menu-right action-category" data-id="${v_cate.id}">
 														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/category/${v_cate.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
-														<a class="dropdown-item delete-category-button" href="#" data-toggle="modal" data-id="${v_cate.id}" data-target="#delete_category"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
+														<a class="dropdown-item delete-category-button" href="#" data-toggle="modal"  data-target="#delete_category"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
 													</div>
 												</div>
 											</td>
@@ -96,7 +96,7 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				 $(".delete-category-button").click(function(){
+				 $(".action-category").click(function(){
 					 alert($(this).attr("data-id"));
 					$('.delete_category').attr("data-delete",$(this).attr("data-id"));
 				 });
