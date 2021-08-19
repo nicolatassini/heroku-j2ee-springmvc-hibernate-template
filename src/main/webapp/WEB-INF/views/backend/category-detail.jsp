@@ -30,7 +30,7 @@
 					</div>
 					<div class="row">
 						<div class="col-lg-8 offset-lg-2">
-							<form id="update">
+							<form>
 								<div class="form-group">
 									<label>Mã thể loại<span class="text-danger">*</span></label>
 									<input class="form-control" value="${category.id}" type="text">
@@ -47,7 +47,7 @@
 									</select>
 								</div>
 								<div class="m-t-20 text-center">
-									<button class="btn btn-primary submit-btn">Save</button>
+									<button class="btn btn-primary submit-btn save">Save</button>
 								</div>
 							</form>
 						</div>
@@ -72,44 +72,35 @@
 		<div class="sidebar-overlay" data-reff=""></div>
 		<%@ include file="b_footer.jsp" %>
 		<script>
-		    console.log(document);
-		    var form = document.getElementById("update");
-
-		    form.onsubmit = function (e) {
-			    alert("123");
-		      // stop the regular form submission
-		      e.preventDefault();
-			    
-
-		      // collect the form data while iterating over the inputs
-		      var data = {};
-		      for (var i = 0, ii = form.length; i < ii; ++i) {
-			var input = form[i];
-			if (input.name) {
-			  data[input.name] = input.value;
-			}
-		      }
-
-		    function addData(){
-		     $.ajax({
-			     type: "POST",
-			     url: "http://example.com",
-			     data: JSON.stringify(data),
-			     contentType: "application/json; charset=utf-8",
-			     crossDomain: true,
-			     dataType: "json",
-			     success: function (data, status, jqXHR) {
-
-				 alert(success);
-			     },
-
-			     error: function (jqXHR, status) {
-				 // error handler
-				 console.log(jqXHR);
-				 alert('fail' + status.code);
-			     }
+			$(document).ready(function(){
+				alert(success);
+			  $("p").click(function(){
+			    $(this).hide();
 			  });
-		    }
+				
+// 			$.ajax({
+// 			     type: "POST",
+// 			     url: "http://example.com",
+// 			     data: JSON.stringify(data),
+// 			     contentType: "application/json; charset=utf-8",
+// 			     crossDomain: true,
+// 			     dataType: "json",
+// 			     success: function (data, status, jqXHR) {
+
+// 				 alert(success);
+// 			     },
+
+// 			     error: function (jqXHR, status) {
+// 				 // error handler
+// 				 console.log(jqXHR);
+// 				 alert('fail' + status.code);
+// 			     }
+// 			  });
+				
+			});
+		    
+
+		    
 		</script>
 	</body>
 </html>
