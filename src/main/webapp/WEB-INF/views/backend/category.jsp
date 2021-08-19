@@ -64,7 +64,7 @@
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<div class="dropdown-menu dropdown-menu-right">
 														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/category/${v_cate.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
-														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
+														<a class="dropdown-item delete-category-button" href="#" data-toggle="modal" data-id="${v_cate.id}" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
 													</div>
 												</div>
 											</td>
@@ -78,14 +78,14 @@
 				</div>
 				<%@ include file="b_message.jsp" %>
 			</div>
-			<div id="delete_salary" class="modal fade delete-modal" role="dialog">
+			<div id="delete_category" data-delete="" class="modal fade delete-modal" role="dialog"  >
 				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content">
 						<div class="modal-body text-center">
 							<img src="${pageContext.request.contextPath}/resources/assets/img/sent.png" alt="" width="50" height="46">
-							<h3>Are you sure want to delete this Salary?</h3>
-							<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
-								<button type="submit" class="btn btn-danger">Delete</button>
+							<h3>Bạn có muốn xoá thể loại này không</h3>
+							<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Không</a>
+								<button type="submit" class="btn btn-danger">Có</button>
 							</div>
 						</div>
 					</div>
@@ -96,6 +96,10 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
+				 $(".delete-category-button").click(function(){
+				 	$('.delete_category').data('delete',$(this).attr("data-id") );
+				 });
+				
 				
 			  $(".saveCate").click(function(){
 				    $.ajax({
