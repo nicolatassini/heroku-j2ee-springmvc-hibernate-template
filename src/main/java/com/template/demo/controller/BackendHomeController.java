@@ -74,7 +74,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
-	@RequestMapping(value = "/category/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/api/category/{id}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public String deleteCategory(Model model, @PathVariable Integer id) {
 		logger.info("====> [Backend] Category delete: " + id);
