@@ -47,7 +47,7 @@
 									</select>
 								</div>
 								<div class="m-t-20 text-center">
-									<button class="btn btn-primary submit-btn save">Save</button>
+									<button class="btn btn-primary submit-btn saveCate">Save</button>
 								</div>
 							</form>
 						</div>
@@ -73,29 +73,27 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				alert(2);
-// 			  $("p").click(function(){
-// 			    $(this).hide();
-// 			  });
 				
-// 			$.ajax({
-// 			     type: "POST",
-// 			     url: "http://example.com",
-// 			     data: JSON.stringify(data),
-// 			     contentType: "application/json; charset=utf-8",
-// 			     crossDomain: true,
-// 			     dataType: "json",
-// 			     success: function (data, status, jqXHR) {
+			  $(".saveCate").click(function(){
+				    $.ajax({
+				     type: "POST",
+				     url: "http://example.com",
+				     data: JSON.stringify(data),
+				     contentType: "application/json; charset=utf-8",
+				     crossDomain: true,
+				     dataType: "json",
+				     success: function (data, status, jqXHR) {
 
-// 				 alert(success);
-// 			     },
+					 alert(success);
+				     },
 
-// 			     error: function (jqXHR, status) {
-// 				 // error handler
-// 				 console.log(jqXHR);
-// 				 alert('fail' + status.code);
-// 			     }
-// 			  });
+				     error: function (jqXHR, status) {
+					 // error handler
+					 console.log(jqXHR);
+					 alert('fail' + status.code);
+				     }
+				  });
+			  });
 				
 			});
 		    
