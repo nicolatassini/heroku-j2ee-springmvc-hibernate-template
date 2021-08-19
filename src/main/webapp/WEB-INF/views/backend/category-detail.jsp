@@ -73,10 +73,10 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				alert(success);
-			  $("p").click(function(){
-			    $(this).hide();
-			  });
+				alert(2);
+// 			  $("p").click(function(){
+// 			    $(this).hide();
+// 			  });
 				
 // 			$.ajax({
 // 			     type: "POST",
