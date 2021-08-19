@@ -64,7 +64,7 @@
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<div class="dropdown-menu dropdown-menu-right">
 														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/category/${v_cate.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
-														<a class="dropdown-item delete-category-button" href="#" data-toggle="modal" data-id="${v_cate.id}" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
+														<a class="dropdown-item delete-category-button" href="#" data-toggle="modal" data-id="${v_cate.id}" data-target="#delete_category"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
 													</div>
 												</div>
 											</td>
@@ -95,34 +95,33 @@
 		<div class="sidebar-overlay" data-reff=""></div>
 		<%@ include file="b_footer.jsp" %>
 		<script>
-// 			$(document).ready(function(){
-// 				alert(1);
-// 				 $(".delete-category-button").click(function(){
-// 				 	$('.delete_category').data('delete',$(this).attr("data-id") );
-// 				 });
+			$(document).ready(function(){
+				 $(".delete-category-button").click(function(){
+				 	$('.delete_category').data('delete',$(this).attr("data-id") );
+				 });
 				
 				
-// 			  $(".delete_category_submit").click(function(){
-// 				  alert("${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"))
-// 				    $.ajax({
-// 				     type: "DELETE",
-// 				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
-// 				     contentType: "application/json; charset=utf-8",
-// 				     crossDomain: true,
-// 				     dataType: "json",
-// 				     success: function (data, status, jqXHR) {
-// 					alert(data);
-// 				     },
+			  $(".delete_category_submit").click(function(){
+				  alert("${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"))
+				    $.ajax({
+				     type: "DELETE",
+				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
+				     contentType: "application/json; charset=utf-8",
+				     crossDomain: true,
+				     dataType: "json",
+				     success: function (data, status, jqXHR) {
+					alert(data);
+				     },
 
-// 				     error: function (jqXHR, status) {
-// 					 // error handler
-// 					 console.log(jqXHR);
-// 					 alert('fail' + status.code);
-// 				     }
-// 				  });
-// 			  });
+				     error: function (jqXHR, status) {
+					 // error handler
+					 console.log(jqXHR);
+					 alert('fail' + status.code);
+				     }
+				  });
+			  });
 				
-// 			});
+			});
 		    
 
 		    
