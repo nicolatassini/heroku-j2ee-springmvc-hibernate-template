@@ -84,7 +84,6 @@
 				     success: function (data, status, jqXHR) {
 					 alert(data);
 				     },
-
 				     error: function (jqXHR, status) {
 					 // error handler
 					 console.log(jqXHR);
