@@ -97,6 +97,7 @@
 		<script>
 			$(document).ready(function(){
 				 $(".delete-category-button").click(function(){
+					 alert($(this).attr("data-id"));
 					$('.delete_category').attr("data-delete",$(this).attr("data-id"));
 				 });
 				
