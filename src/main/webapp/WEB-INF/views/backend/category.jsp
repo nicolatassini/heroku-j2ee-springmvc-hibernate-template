@@ -105,7 +105,7 @@
 				  
 				    $.ajax({
 				     type: "DELETE",
-				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-id"),
+				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
 				     contentType: "application/json; charset=utf-8",
 				     crossDomain: true,
 				     dataType: "json",
