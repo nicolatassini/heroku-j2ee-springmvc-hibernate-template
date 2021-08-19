@@ -95,8 +95,8 @@
 		<div class="sidebar-overlay" data-reff=""></div>
 		<%@ include file="b_footer.jsp" %>
 		<script>
-			$(document).ready(function(){
-				alert(1);
+// 			$(document).ready(function(){
+// 				alert(1);
 // 				 $(".delete-category-button").click(function(){
 // 				 	$('.delete_category').data('delete',$(this).attr("data-id") );
 // 				 });
@@ -122,7 +122,7 @@
 // 				  });
 // 			  });
 				
-			});
+// 			});
 		    
 
 		    
