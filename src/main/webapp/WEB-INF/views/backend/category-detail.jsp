@@ -33,11 +33,11 @@
 							<form>
 								<div class="form-group">
 									<label>Mã thể loại<span class="text-danger">*</span></label>
-									<input class="form-control" value="${category.id}" type="text">
+									<input class="form-control" id="category-id" value="${category.id}" type="text">
 								</div>
 								<div class="form-group">
 									<label>Tên thể loại<span class="text-danger">*</span></label>
-									<input class="form-control" value="${category.name}" type="text">
+									<input class="form-control" id="category-name" value="${category.name}" type="text">
 								</div>
 								<div class="form-group">
 									<label>Trạng thái<span class="text-danger">*</span></label>
@@ -73,18 +73,16 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				
 			  $(".saveCate").click(function(){
 				    $.ajax({
-				     type: "POST",
-				     url: "http://example.com",
-				     data: JSON.stringify(data),
-				     contentType: "application/json; charset=utf-8",
-				     crossDomain: true,
-				     dataType: "json",
+				     type: "PUT",
+				     url: "${pageContext.request.contextPath}/admin/api/category?id="+$('#category-id').val()+"&name="+$('#category-id').val(),
+// 				     data: JSON.stringify(data),
+// 				     contentType: "application/json; charset=utf-8",
+// 				     crossDomain: true,
+// 				     dataType: "json",
 				     success: function (data, status, jqXHR) {
-
-					 alert(success);
+					 alert(data);
 				     },
 
 				     error: function (jqXHR, status) {
