@@ -96,30 +96,31 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
+				alert(1);
 // 				 $(".delete-category-button").click(function(){
 // 				 	$('.delete_category').data('delete',$(this).attr("data-id") );
 // 				 });
 				
 				
-			  $(".delete_category_submit").click(function(){
-				  alert("${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"))
-				    $.ajax({
-				     type: "DELETE",
-				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
-				     contentType: "application/json; charset=utf-8",
-				     crossDomain: true,
-				     dataType: "json",
-				     success: function (data, status, jqXHR) {
-					alert(data);
-				     },
+// 			  $(".delete_category_submit").click(function(){
+// 				  alert("${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"))
+// 				    $.ajax({
+// 				     type: "DELETE",
+// 				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
+// 				     contentType: "application/json; charset=utf-8",
+// 				     crossDomain: true,
+// 				     dataType: "json",
+// 				     success: function (data, status, jqXHR) {
+// 					alert(data);
+// 				     },
 
-				     error: function (jqXHR, status) {
-					 // error handler
-					 console.log(jqXHR);
-					 alert('fail' + status.code);
-				     }
-				  });
-			  });
+// 				     error: function (jqXHR, status) {
+// 					 // error handler
+// 					 console.log(jqXHR);
+// 					 alert('fail' + status.code);
+// 				     }
+// 				  });
+// 			  });
 				
 			});
 		    
