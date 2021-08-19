@@ -97,13 +97,11 @@
 		<script>
 			$(document).ready(function(){
 				 $(".action-category").click(function(){
-					alert($(this).attr("data-id"));
 					$('#delete_category').attr("data-delete",$(this).attr("data-id"));
 				 });
 				
 				
 			  $(".delete_category_submit").click(function(){
-				  alert("${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"))
 				    $.ajax({
 				     type: "DELETE",
 				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
@@ -113,9 +111,7 @@
 				     success: function (data, status, jqXHR) {
 					alert(data);
 				     },
-
 				     error: function (jqXHR, status) {
-					 // error handler
 					 console.log(jqXHR);
 					 alert('fail' + status.code);
 				     }
@@ -123,8 +119,6 @@
 			  });
 				
 			});
-		    
-
 		    
 		</script>
 	</body>
