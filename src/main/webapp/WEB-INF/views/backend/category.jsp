@@ -96,13 +96,13 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				 $(".delete-category-button").click(function(){
-				 	$('.delete_category').data('delete',$(this).attr("data-id") );
-				 });
+// 				 $(".delete-category-button").click(function(){
+// 				 	$('.delete_category').data('delete',$(this).attr("data-id") );
+// 				 });
 				
 				
 			  $(".delete_category_submit").click(function(){
-				  
+				  alert("${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"))
 				    $.ajax({
 				     type: "DELETE",
 				     url: "${pageContext.request.contextPath}/admin/api/category/" + $("#delete_category").attr("data-delete"),
