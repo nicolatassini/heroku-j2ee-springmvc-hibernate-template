@@ -18,6 +18,11 @@ public class CategoryDao {
 		return entityManager.find(Category.class, id);
 	}
 	
+	public void delete(Integer id) {
+		Category category = entityManager.find(Category.class, id);
+		entityManager.remove(category);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public List<Category> getCategories() {
 		return entityManager.createQuery("select c from Category c").getResultList();
