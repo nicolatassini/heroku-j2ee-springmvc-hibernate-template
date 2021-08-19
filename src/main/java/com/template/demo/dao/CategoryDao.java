@@ -17,7 +17,7 @@ public class CategoryDao {
 	public Category find(Integer id) {
 		return entityManager.find(Category.class, id);
 	}
-	
+	@Transactional
 	public void delete(Integer id) {
 		Category category = entityManager.find(Category.class, id);
 		entityManager.remove(category);
