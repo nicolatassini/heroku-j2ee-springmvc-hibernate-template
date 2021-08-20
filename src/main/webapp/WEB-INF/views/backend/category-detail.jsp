@@ -83,7 +83,7 @@
 	// 				     crossDomain: true,
 					     dataType: "script",
 					     success: function (data, status) {
-						 alert(data);
+						 location.reload();
 					     },
 					     error: function (status) {
 						 // error handler
