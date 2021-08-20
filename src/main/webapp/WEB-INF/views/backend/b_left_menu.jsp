@@ -7,7 +7,7 @@
 								<a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
 							</li>
 							<li>
-								<a href="doctors.html"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
+								<a href="${pageContext.request.contextPath}/admin/category"><i class="fa fa-user-md ${categoryActive}"></i> <span>Thể loại</span></a>
 							</li>
 							<li>
 								<a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
