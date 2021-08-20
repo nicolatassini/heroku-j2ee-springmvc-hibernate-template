@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <div class="sidebar" id="sidebar">
 				<div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
@@ -6,8 +7,8 @@
 							<li>
 								<a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
 							</li>
-							<li>
-								<a href="${pageContext.request.contextPath}/admin/category"><i class="fa fa-user-md ${categoryActive}"></i> <span>Thể loại</span></a>
+							<li class="${categoryActive}>
+								<a href="${pageContext.request.contextPath}/admin/category"><i class="fa fa-user-md"></i> <span>Thể loại</span></a>
 							</li>
 							<li>
 								<a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
