@@ -63,7 +63,7 @@
 					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
 					     dataType: "script",
 					     success: function (data, status) {
-						 location.reload();
+						 location.href = "${pageContext.request.contextPath}/admin/category";
 					     },
 					     error: function (status) {
 						 // error handler
