@@ -7,7 +7,7 @@
 							<li>
 								<a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
 							</li>
-							<li class="${categoryActive}>
+							<li class="${categoryActive}">
 								<a href="${pageContext.request.contextPath}/admin/category"><i class="fa fa-user-md"></i> <span>Thể loại</span></a>
 							</li>
 							<li>
