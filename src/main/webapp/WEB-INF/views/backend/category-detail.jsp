@@ -73,21 +73,22 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-			  $(".saveCate").click(function(){
+			  $(".saveCate").click(function(e){
+				e.preventDefault();
 				    $.ajax({
-				     type: "PUT",
-				     url: "${pageContext.request.contextPath}/admin/api/category?id="+$('#category-id').val()+"&name="+$('#category-name').val(),
-// 				     data: JSON.stringify(data),
-// 				     contentType: "application/json; charset=utf-8",
-// 				     crossDomain: true,
-				     dataType: "json",
-				     success: function (data, status) {
-					 alert(data);
-				     },
-				     error: function (status) {
-					 // error handler
-					 console.log(status);
-				     }
+					     type: "PUT",
+					     url: "${pageContext.request.contextPath}/admin/api/category?id="+$('#category-id').val()+"&name="+$('#category-name').val(),
+	// 				     data: JSON.stringify(data),
+	// 				     contentType: "application/json; charset=utf-8",
+	// 				     crossDomain: true,
+					     dataType: "json",
+					     success: function (data, status) {
+						 alert(data);
+					     },
+					     error: function (status) {
+						 // error handler
+						 console.log(status);
+					     }
 				  });
 			  });
 				
