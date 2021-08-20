@@ -38,8 +38,43 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
+	@RequestMapping(value = "/brand/add", method = RequestMethod.GET)
+	public String brandCreate(Model model) {
+		logger.info("====> [Backend] Create brand page!!");
+		model.addAttribute("brandActive", "active");
+		return "backend/brand-create";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/brand", method = RequestMethod.GET)
+	public String brand(Model model) {
+		logger.info("====> [Backend] Brand page!!");
+		List<Category> categoryList = categoryDao.getCategories();
+		model.addAttribute("categoryList", categoryList);
+		model.addAttribute("brandActive", "active");
+		return "backend/brand";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/brand/{id}", method = RequestMethod.GET)
+	public String brandDetail(Model model, @PathVariable Integer id) {
+		logger.info("====> [Backend] Brand detail page!!");
+		Category category = categoryDao.find(id);
+		model.addAttribute("category", category);
+		model.addAttribute("brandActive", "active");
+		return "backend/brand-detail";
+	}
+	
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
 	@RequestMapping(value = "/category/add", method = RequestMethod.GET)
-	public String categoryDetail(Model model) {
+	public String categoryCreate(Model model) {
 		logger.info("====> [Backend] Create category page!!");
 		model.addAttribute("categoryActive", "active");
 		return "backend/category-create";
