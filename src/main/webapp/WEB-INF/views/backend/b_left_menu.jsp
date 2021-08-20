@@ -10,7 +10,7 @@
 							<li class="${categoryActive}">
 								<a href="${pageContext.request.contextPath}/admin/category"><i class="fa fa-user-md"></i> <span>Thể loại</span></a>
 							</li>
-							<li class="${categoryBrand}">
+							<li class="${brandActive}">
 								<a href="${pageContext.request.contextPath}/admin/brand"><i class="fa fa-user-md"></i> <span>Nhãn hiệu</span></a>
 							</li>
 							
