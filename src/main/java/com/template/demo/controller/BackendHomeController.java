@@ -139,7 +139,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 */
 	@RequestMapping(value = "/api/brand", method = RequestMethod.PUT, produces="application/json")
 	@ResponseBody
-	public String updateCategory(@RequestParam(required=false) Integer id, @RequestParam String name ) {
+	public String updateBrand(@RequestParam(required=false) Integer id, @RequestParam String name ) {
 		logger.info("====> [Backend] Brand update: " + id + name);
 		Brand brand = new Brand();
 		brand.setId(id);
