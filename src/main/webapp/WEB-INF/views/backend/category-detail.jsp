@@ -86,7 +86,7 @@
 				     },
 				     error: function (status) {
 					 // error handler
-					 alert('fail' + status);
+					 console.log(status);
 				     }
 				  });
 			  });
