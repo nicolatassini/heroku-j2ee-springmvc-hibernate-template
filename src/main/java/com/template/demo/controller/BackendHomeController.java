@@ -38,6 +38,16 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
+	@RequestMapping(value = "/category/add", method = RequestMethod.GET)
+	public String categoryDetail(Model model) {
+		logger.info("====> [Backend] Create category page!!");
+		model.addAttribute("categoryActive", "active");
+		return "backend/category-create";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
 	@RequestMapping(value = "/category", method = RequestMethod.GET)
 	public String category(Model model) {
 		logger.info("====> [Backend] Category page!!");
