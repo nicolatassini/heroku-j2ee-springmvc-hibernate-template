@@ -28,7 +28,7 @@
 							<h4 class="page-title">Quản lý loại hàng</h4>
 						</div>
 						<div class="col-sm-8 col-7 text-right m-b-30">
-							<a href="add-salary.html" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i>Thêm loại hàng</a>
+							<a href="${pageContext.request.contextPath}/admin/category/add" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i>Thêm loại hàng</a>
 						</div>
 					</div>
 					<div class="row">
