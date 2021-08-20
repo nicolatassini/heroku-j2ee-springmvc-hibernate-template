@@ -43,6 +43,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 		logger.info("====> [Backend] Category page!!");
 		List<Category> categoryList = categoryDao.getCategories();
 		model.addAttribute("categoryList", categoryList);
+		model.addAttribute("categoryActive", "active");
 		return "backend/category";
 	}
 	
@@ -54,6 +55,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 		logger.info("====> [Backend] Category detail page!!");
 		Category category = categoryDao.find(id);
 		model.addAttribute("category", category);
+		model.addAttribute("categoryActive", "active");
 		return "backend/category-detail";
 	}
 	
