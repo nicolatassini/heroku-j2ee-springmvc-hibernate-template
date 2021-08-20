@@ -33,7 +33,7 @@
 							<form>
 								<div class="form-group">
 									<label>Mã thể loại<span class="text-danger">*</span></label>
-									<input class="form-control" id="category-id" value="${category.id}" type="text">
+									<input class="form-control" id="category-id" value="${category.id}" type="text" readonly>
 								</div>
 								<div class="form-group">
 									<label>Tên thể loại<span class="text-danger">*</span></label>
