@@ -2,6 +2,8 @@ package com.template.demo.controller;
 
 import com.template.demo.model.Category;
 import com.template.demo.dao.CategoryDao;
+import com.template.demo.model.Brand;
+import com.template.demo.dao.BrandDao;
 import java.io.Serializable;
 import java.util.*;
 import org.slf4j.Logger;
@@ -25,6 +27,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 	
 	@Autowired
 	private CategoryDao categoryDao;
+	
+	@Autowired
+	private BrandDao brandDao;
 
 	/**
 	 * Selects the home page and populates the model with a message
@@ -51,8 +56,8 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@RequestMapping(value = "/brand", method = RequestMethod.GET)
 	public String brand(Model model) {
 		logger.info("====> [Backend] Brand page!!");
-		List<Category> categoryList = categoryDao.getCategories();
-		model.addAttribute("categoryList", categoryList);
+		List<Brand> brandList = brandDao.getList();
+		model.addAttribute("brandList", brandList);
 		model.addAttribute("brandActive", "active");
 		return "backend/brand";
 	}
@@ -63,8 +68,8 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@RequestMapping(value = "/brand/{id}", method = RequestMethod.GET)
 	public String brandDetail(Model model, @PathVariable Integer id) {
 		logger.info("====> [Backend] Brand detail page!!");
-		Category category = categoryDao.find(id);
-		model.addAttribute("category", category);
+		Brand brand = brandDao.find(id);
+		model.addAttribute("brand", brand);
 		model.addAttribute("brandActive", "active");
 		return "backend/brand-detail";
 	}
@@ -126,6 +131,31 @@ public class BackendHomeController extends BaseController implements Serializabl
 	public String deleteCategory(Model model, @PathVariable Integer id) {
 		logger.info("====> [Backend] Category delete: " + id);
 		categoryDao.delete(id);
+		return "success";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/api/brand", method = RequestMethod.PUT, produces="application/json")
+	@ResponseBody
+	public String updateCategory(@RequestParam(required=false) Integer id, @RequestParam String name ) {
+		logger.info("====> [Backend] Brand update: " + id + name);
+		Brand brand = new Brand();
+		brand.setId(id);
+		brand.setName(name);
+		brandDao.save(brand);
+		return "success";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/api/brand/{id}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public String deleteBrand(Model model, @PathVariable Integer id) {
+		logger.info("====> [Backend] Brand delete: " + id);
+		brandDao.delete(id);
 		return "success";
 	}
 	
