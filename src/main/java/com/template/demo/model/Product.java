@@ -32,7 +32,36 @@ public class Product extends BaseEntity implements Serializable {
 	@Column
 	private Long brandId;
 
+	private String brand;
+	
+	private String category;
+	
+	private String image;
+	
+	public String getImage() {
+		return image;
+	}
 
+	public void setImage(String image) {
+		this.image = image;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
