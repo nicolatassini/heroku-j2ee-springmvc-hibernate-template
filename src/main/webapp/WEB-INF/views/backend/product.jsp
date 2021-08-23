@@ -85,7 +85,7 @@
 												${v_product.id}
 											</td>
 											<td>
-												<img class="rounded-circle" src="${pageContext.request.contextPath}/resources/assets/img/user.jpg" height="28" width="28" alt="">
+												<img class="rounded-circle" src="${v_product.image}" height="28" width="28" alt="">
 												${v_product.name}
 											</td>
 											<td>
