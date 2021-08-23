@@ -45,7 +45,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 * Selects the home page and populates the model with a message
 	 */
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	public String product(Model model
+	public String product(Model model,
 			      @RequestParam(required = false) String name, 
 			      @RequestParam(required = false) Integer categoryId,
 			      @RequestParam(required = false) Integer brandId
