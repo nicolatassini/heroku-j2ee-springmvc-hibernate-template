@@ -87,10 +87,10 @@
 												${v_product.name}
 											</td>
 											<td>
-												${v_product.categoryName}
+												${v_product.category}
 											</td>
 											<td>
-												${v_product.brandName}
+												${v_product.brand}
 											</td>
 											<td>
 												${v_product.description}
