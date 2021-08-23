@@ -42,9 +42,10 @@
 							<div class="form-group form-focus select-focus">
 								<label class="focus-label">Loại hàng</label>
 								<select class="select floating">
-									<option> -- Select -- </option>
-									<option>Employee</option>
-									<option>Manager</option>
+									<option value="-1"> -- Select -- </option>
+									 <c:forEach items="${categoryList}" var="v_cate">
+										<option value="${v_cate.id}">${v_cate.name}</option>
+									</c:forEach>
 								</select>
 							</div>
 						</div>
@@ -52,9 +53,10 @@
 							<div class="form-group form-focus select-focus">
 								<label class="focus-label">Nhãn hiệu</label>
 								<select class="select floating">
-									<option> -- Select -- </option>
-									<option>Employee</option>
-									<option>Manager</option>
+									<option value="-1"> -- Select -- </option>
+									<c:forEach items="${brandList}" var="v_brand">
+										<option value="${v_brand.id}">${v_brand.name}</option>
+									</c:forEach>
 								</select>
 							</div>
 						</div>
