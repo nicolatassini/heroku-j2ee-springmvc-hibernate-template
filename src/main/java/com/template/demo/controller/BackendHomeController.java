@@ -46,9 +46,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 */
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public String product(Model model,
-			      @RequestParam(required = false) String name, 
-			      @RequestParam(required = false) Integer categoryId,
-			      @RequestParam(required = false) Integer brandId
+			      @RequestParam(required = false, defaultValue = "") String name, 
+			      @RequestParam(required = false, defaultValue = "-1") Integer categoryId,
+			      @RequestParam(required = false, defaultValue = "-1") Integer brandId
 			     ) {
 		logger.info("====> [Backend] Brand page!!");
 		List<Product> productList = productDao.getList(name, categoryId, brandId);
