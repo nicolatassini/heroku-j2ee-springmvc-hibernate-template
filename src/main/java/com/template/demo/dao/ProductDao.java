@@ -25,7 +25,11 @@ public class ProductDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<Product> getList(String name, Integer categoryId, Integer brandId) {
-		return entityManager.createQuery("select c from Product c").getResultList();
+		return entityManager.createQuery("select c from Product c where 1=1 AND (:name IS NULL OR c.name LIKE '%:name%') AND (:categoryId IS NULL OR c.categoryId = :categoryId) AND (:brandId IS NULL OR c.brandId = :brandId)")
+			.setParameter("name", name)
+			.setParameter("categoryId", categoryId)
+			.setParameter("brandId", brandId)
+			.getResultList();
 	}
 	
 	@Transactional
