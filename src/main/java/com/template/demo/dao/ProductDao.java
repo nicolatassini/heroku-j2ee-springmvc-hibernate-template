@@ -45,7 +45,7 @@ public class ProductDao {
 				.setParameter("productId", categoryId)
 				.getSingleResult();
 			
-			p.setCategory(image.getLink());					
+			p.setImage(image.getLink());					
 		}
 		return productList;
 	}
