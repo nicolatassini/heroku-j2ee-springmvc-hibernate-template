@@ -3,7 +3,7 @@ package com.template.demo.controller;
 import com.template.demo.model.Category;
 import com.template.demo.dao.CategoryDao;
 import com.template.demo.model.Brand;
-import com.template.demo.dao.BrandDao;
+import com.template.demo.dao.*;
 import java.io.Serializable;
 import java.util.*;
 import org.slf4j.Logger;
@@ -30,6 +30,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 	
 	@Autowired
 	private BrandDao brandDao;
+	
+	@Autowired
+	private ProductDao productDao;
 
 	/**
 	 * Selects the home page and populates the model with a message
@@ -46,8 +49,8 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public String product(Model model) {
 		logger.info("====> [Backend] Brand page!!");
-		List<Brand> brandList = brandDao.getList();
-		model.addAttribute("productList", brandList);
+		List<Product> productList = productDao.getList();
+		model.addAttribute("productList", productList);
 		model.addAttribute("productActive", "active");
 		return "backend/product";
 	}
