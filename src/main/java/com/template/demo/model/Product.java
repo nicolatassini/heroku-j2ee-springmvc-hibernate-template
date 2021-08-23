@@ -31,11 +31,12 @@ public class Product extends BaseEntity implements Serializable {
 
 	@Column
 	private Long brandId;
-
+	
+	@Transient
 	private String brand;
-	
+	@Transient
 	private String category;
-	
+	@Transient
 	private String image;
 	
 	public String getImage() {
