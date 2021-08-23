@@ -135,10 +135,11 @@
 		<script>
 			$(document).ready(function(){
 				 $(".btn-search-product").click(function(){
-					
-					
 					window.location.href = "${pageContext.request.contextPath}/admin/product?name=" + $(".product-name").val() + "&categoryId=" + $('.select-category').find('option:selected').val() + "&brandId="+$('.select-brand').find('option:selected').val();
 				 });
+				
+				$(".select-category").val("${categoryId}").change();
+				$(".select-brand").val("${brandId}").change();
 				
 				$(".action-product").click(function(){
 					$('#delete_product').attr("data-delete",$(this).attr("data-id"));
