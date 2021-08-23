@@ -25,7 +25,7 @@
 				<div class="content">
 					<div class="row">
 						<div class="col-sm-4 col-5">
-							<h4 class="page-title">Quản lý nhãn hiệu</h4>
+							<h4 class="page-title">Quản lý sản phẩm</h4>
 						</div>
 						<div class="col-sm-8 col-7 text-right m-b-30">
 							<a href="${pageContext.request.contextPath}/admin/brand/add" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i>Thêm loại hàng</a>
@@ -35,13 +35,13 @@
 						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
 							<div class="form-group form-focus">
 								<label class="focus-label">Tên hàng</label>
-								<input type="text" class="form-control floating">
+								<input type="text" class="form-control floating product-name">
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
 							<div class="form-group form-focus select-focus">
 								<label class="focus-label">Loại hàng</label>
-								<select class="select floating">
+								<select class="select floating select-category">
 									<option value="-1"> -- Select -- </option>
 									 <c:forEach items="${categoryList}" var="v_cate">
 										<option value="${v_cate.id}">${v_cate.name}</option>
@@ -52,7 +52,7 @@
 						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
 							<div class="form-group form-focus select-focus">
 								<label class="focus-label">Nhãn hiệu</label>
-								<select class="select floating">
+								<select class="select floating select-brand">
 									<option value="-1"> -- Select -- </option>
 									<c:forEach items="${brandList}" var="v_brand">
 										<option value="${v_brand.id}">${v_brand.name}</option>
@@ -60,7 +60,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12 btn-search-product">
 							<a href="#" class="btn btn-success btn-block"> Search </a>
 						</div>
 					</div>
@@ -70,7 +70,7 @@
 								<table class="table table-striped custom-table datatable">
 									<thead>
 										<tr>
-											<th style="width:25%;">Mã sản phẩm</th>
+											<th style="width:5%;">Mã sản phẩm</th>
 											<th>Tên sản phẩm</th>
 											<th>Thể loại</th>
 											<th>Nhãn hiệu</th>
@@ -134,7 +134,13 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				 $(".action-product").click(function(){
+				 $(".btn-search-product").click(function(){
+					
+					
+					window.location.href = "${pageContext.request.contextPath}/admin/product?name=" + $(".product-name").val() + "&categoryId=" + $('.select-category').find('option:selected').val() + "&brandId="+$('.select-brand').find('option:selected').val();
+				 });
+				
+				$(".action-product").click(function(){
 					$('#delete_product').attr("data-delete",$(this).attr("data-id"));
 				 });
 				
