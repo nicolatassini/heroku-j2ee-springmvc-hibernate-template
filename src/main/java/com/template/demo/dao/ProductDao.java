@@ -25,7 +25,7 @@ public class ProductDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<Product> getList(String name, Integer categoryId, Integer brandId) {
-		return entityManager.createQuery("select c from Product c where 1=1 AND (:name = '' OR c.name LIKE '%:name%') AND (:categoryId = -1 OR c.categoryId = :categoryId) AND (:brandId = -1 OR c.brandId = :brandId)")
+		return entityManager.createQuery("select c from Product c where 1=1 AND (:name = '' OR lower(c.name) like lower(concat('%', :name,'%'))) AND (:categoryId = -1 OR c.categoryId = :categoryId) AND (:brandId = -1 OR c.brandId = :brandId)")
 			.setParameter("name", name)
 			.setParameter("categoryId", categoryId)
 			.setParameter("brandId", brandId)
