@@ -27,10 +27,10 @@ public class Product extends BaseEntity implements Serializable {
 	private String description;
 
 	@Column
-	private Long categoryId;
+	private Integer categoryId;
 
 	@Column
-	private Long brandId;
+	private Integer brandId;
 	
 	@Transient
 	private String brand;
@@ -87,19 +87,19 @@ public class Product extends BaseEntity implements Serializable {
 		this.description = description;
 	}
 
-	public Long getCategoryId() {
+	public Integer getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(Long categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 
-	public Long getBrandId() {
+	public Integer getBrandId() {
 		return brandId;
 	}
 
-	public void setBrandId(Long brandId) {
+	public void setBrandId(Integer brandId) {
 		this.brandId = brandId;
 	}
 }
