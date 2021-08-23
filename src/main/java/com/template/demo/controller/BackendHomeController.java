@@ -1,8 +1,6 @@
 package com.template.demo.controller;
 
-import com.template.demo.model.Category;
-import com.template.demo.dao.CategoryDao;
-import com.template.demo.model.Brand;
+import com.template.demo.model.*;
 import com.template.demo.dao.*;
 import java.io.Serializable;
 import java.util.*;
