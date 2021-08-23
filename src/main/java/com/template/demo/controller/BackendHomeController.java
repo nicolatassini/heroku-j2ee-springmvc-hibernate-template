@@ -51,9 +51,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 // 			      @RequestParam(required = false) String brandId
 			     ) {
 		logger.info("====> [Backend] Brand page!!");
-		List<Product> productList = productDao.getList();
+// 		List<Product> productList = productDao.getList();
 		
-		model.addAttribute("productList", productList);
+// 		model.addAttribute("productList", productList);
 		model.addAttribute("productActive", "active");
 		
 // 		List<Brand> brandList = brandDao.getList();
