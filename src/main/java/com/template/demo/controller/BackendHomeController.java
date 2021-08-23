@@ -47,11 +47,20 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 * Selects the home page and populates the model with a message
 	 */
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	public String product(Model model) {
+	public String product(Model model, @RequestParam String name, @RequestParam String categoryId, @RequestParam String brandId) {
 		logger.info("====> [Backend] Brand page!!");
 		List<Product> productList = productDao.getList();
+		
 		model.addAttribute("productList", productList);
 		model.addAttribute("productActive", "active");
+		
+		List<Brand> brandList = brandDao.getList();
+		model.addAttribute("brandList", brandList);
+		
+		
+		List<Category> categoryList = categoryDao.getCategories();
+		model.addAttribute("categoryList", categoryList);
+		
 		return "backend/product";
 	}
 	
