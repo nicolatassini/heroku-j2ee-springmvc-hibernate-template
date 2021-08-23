@@ -24,7 +24,7 @@ public class ProductDao {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Product> getList() {
+	public List<Product> getList(String name, Integer categoryId, Integer brandId) {
 		return entityManager.createQuery("select c from Product c").getResultList();
 	}
 	
