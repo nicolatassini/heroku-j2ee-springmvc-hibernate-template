@@ -35,13 +35,13 @@
 						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
 							<div class="form-group form-focus">
 								<label class="focus-label">Tên hàng</label>
-								<input type="text" class="form-control floating product-name">
+								<input type="text" class="form-control floating product-name" value="${name}">
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
 							<div class="form-group form-focus select-focus">
 								<label class="focus-label">Loại hàng</label>
-								<select class="select floating select-category">
+								<select class="select floating select-category" value="${categoryId}">
 									<option value="-1"> -- Select -- </option>
 									 <c:forEach items="${categoryList}" var="v_cate">
 										<option value="${v_cate.id}">${v_cate.name}</option>
@@ -52,7 +52,7 @@
 						<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
 							<div class="form-group form-focus select-focus">
 								<label class="focus-label">Nhãn hiệu</label>
-								<select class="select floating select-brand">
+								<select class="select floating select-brand" value="${brandId}">
 									<option value="-1"> -- Select -- </option>
 									<c:forEach items="${brandList}" var="v_brand">
 										<option value="${v_brand.id}">${v_brand.name}</option>
