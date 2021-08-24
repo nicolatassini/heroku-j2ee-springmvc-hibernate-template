@@ -100,7 +100,7 @@
 			$(document).ready(function(){
 			  $("#brand").val("${product.brandId}").change();
 			  $("#category").val("${product.categoryId}").change();
-			  CKEDITOR.instances.desc.setData("${product.description}");	
+			  CKEDITOR.instances.desc.setData('${product.description}');	
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
 				  var data = {
