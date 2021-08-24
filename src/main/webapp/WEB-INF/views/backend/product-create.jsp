@@ -98,7 +98,7 @@
 					    image: $('#product-image').val(),
 					    categoryId: $('#category').find('option:selected').val(),
 					    brandId: $('#brand').find('option:selected').val(),
-					    description: CKEDITOR.instances.desc.getData(),
+					    description: escape(CKEDITOR.instances.desc.getData())
 					}  
 				  $.ajax({
 					     type: "PUT",
