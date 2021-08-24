@@ -88,7 +88,7 @@
 			$(document).ready(function(){
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				  alert($('#product-name').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + $('#desc').val()  );
+				  alert($('#product-name').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + CKEDITOR.instances.desc.getData();  );
 // 				    $.ajax({
 // 					     type: "PUT",
 // 					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
