@@ -102,9 +102,9 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-			  CKEDITOR.instances.desc.setData("${product.description}");	
 			  $("#brand").val("${product.brandId}").change();
 			  $("#category").val("${product.categoryId}").change();
+			  CKEDITOR.instances.desc.setData("${product.description}");	
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
 				  var data = {
