@@ -217,6 +217,17 @@ public class BackendHomeController extends BaseController implements Serializabl
 		return "success";
 	}
 	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/api/product/{id}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public String deleteProd(Model model, @PathVariable Integer id) {
+		logger.info("====> [Backend] Product delete: " + id);
+		productDao.delete(id);
+		return "success";
+	}
+	
 	
 	
 }
