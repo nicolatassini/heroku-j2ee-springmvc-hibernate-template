@@ -101,7 +101,7 @@
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<div class="dropdown-menu dropdown-menu-right action-product" data-id="${v_product.id}">
-														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/brand/${v_product.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
+														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/product/${v_product.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
 														<a class="dropdown-item" href="#" data-toggle="modal"  data-target="#delete_product"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
 													</div>
 												</div>
