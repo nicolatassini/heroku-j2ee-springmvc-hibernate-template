@@ -205,4 +205,20 @@ public class BackendHomeController extends BaseController implements Serializabl
 		return "success";
 	}
 	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/api/brand", method = RequestMethod.PUT, produces="application/json")
+	@ResponseBody
+	public String updateProduct(@RequestParam(required=false) Integer id, @RequestParam String name ) {
+		logger.info("====> [Backend] Brand update: " + id + name);
+		Brand brand = new Brand();
+		brand.setId(id);
+		brand.setName(name);
+		brandDao.save(brand);
+		return "success";
+	}
+	
+	
+	
 }
