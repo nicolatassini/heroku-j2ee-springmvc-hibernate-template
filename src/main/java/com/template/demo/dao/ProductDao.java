@@ -15,7 +15,23 @@ public class ProductDao {
 	private EntityManager entityManager;
 	
 	public Product find(Integer id) {
-		return entityManager.find(Product.class, id);
+		Product p = entityManager.find(Product.class, id)
+		if(null != p.getBrandId()){
+				Brand brand = entityManager.find(Brand.class, p.getBrandId());
+				p.setBrand(brand.getName());
+			}
+			if(null != p.getCategoryId()){
+				Category category = entityManager.find(Category.class, p.getCategoryId());
+				p.setCategory(category.getName());
+			}
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productId = :productId")
+				.setParameter("productId", p.getId())
+				.getResultList();
+								      
+			if(imageList.size() > 0){
+				p.setImage(imageList.get(0).getLink());
+			}
+		return p;
 	}
 	@Transactional
 	public void delete(Integer id) {
