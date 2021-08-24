@@ -55,7 +55,10 @@ public class ProductDao {
 	@Transactional
 	public Product save(Product product) {
 		if (product.getId() == null) {
-			entityManager.persist(product);
+			Product productNew = entityManager.persist(product);
+			Image image = new Image();
+			image.setProductId(productNew.getId());
+			image.setLink(product.getImage());
 			return product;
 		} else {
 			return entityManager.merge(product);
