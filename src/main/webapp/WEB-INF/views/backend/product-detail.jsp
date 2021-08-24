@@ -102,6 +102,7 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
+			  console.log(${product});
 			  CKEDITOR.instances.desc.setData( '${product.description}' );	
 			  $("#brand").val("${product.brandId}").change();
 			  $("#category").val("${product.categoryId}").change();
