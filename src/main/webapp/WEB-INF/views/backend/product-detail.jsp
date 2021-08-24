@@ -104,7 +104,7 @@
 			$(document).ready(function(){
 			  $("#brand").val("${product.brandId}").change();
 			  $("#category").val("${product.categoryId}").change();
-			  CKEDITOR.instances.desc.setData("${product.description}");	
+			  CKEDITOR.instances.desc.setData(unescape("${product.description}"));	
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
 				  var data = {
@@ -113,7 +113,7 @@
 					    image: $('#product-image').val(),
 					    categoryId: $('#category').find('option:selected').val(),
 					    brandId: $('#brand').find('option:selected').val(),
-					    description: CKEDITOR.instances.desc.getData(),
+					    description: escape(CKEDITOR.instances.desc.getData()),
 					}  
 				  $.ajax({
 					     type: "PUT",
