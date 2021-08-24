@@ -232,7 +232,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@RequestMapping(value = "/api/product", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
 	@ResponseBody
 	public String updateProduct(@RequestBody Product productDto ) {
-		logger.info("====> [Backend] Product update: " + productDto.getLink());
+		logger.info("====> [Backend] Product update: " + productDto.getDescription());
 		
 		productDao.save(productDto);
 		return "success";
