@@ -39,7 +39,12 @@
 												<input class="form-control" id="product-name" type="text">
 											</div>
 										</div>
-									
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Link đại diện sản phẩm</label>
+												<input class="form-control" id="product-image" type="text">
+											</div>
+										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Thể loại</label>
@@ -88,7 +93,7 @@
 			$(document).ready(function(){
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				  alert($('#product-name').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + CKEDITOR.instances.desc.getData()  );
+				  alert($('#product-name').val() + "-" $('#product-image').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + CKEDITOR.instances.desc.getData()  );
 // 				    $.ajax({
 // 					     type: "PUT",
 // 					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
