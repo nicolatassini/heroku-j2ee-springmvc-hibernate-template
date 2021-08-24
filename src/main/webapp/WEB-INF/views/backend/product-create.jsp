@@ -65,7 +65,10 @@
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label>Mô tả</label>
-												<textarea class="form-control" rows="4" cols="50"></textarea>
+												<textarea class="form-control" rows="4" cols="50" name="desc"></textarea>
+												<script>
+													CKEDITOR.replace( 'desc' );
+												</script>
 											</div>
 										</div>
 									</div>
