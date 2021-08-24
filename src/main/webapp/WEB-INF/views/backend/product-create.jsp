@@ -74,7 +74,7 @@
 										</div>
 									</div>
 									<div class="m-t-20 text-center">
-										<button class="btn btn-primary submit-btn">Lưu</button>
+										<button class="btn btn-primary submit-btn save-btn">Lưu</button>
 									</div>
 								</form>
 							</div>
@@ -86,20 +86,21 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-			  $(".saveCate").click(function(e){
+			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				    $.ajax({
-					     type: "PUT",
-					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
-					     dataType: "script",
-					     success: function (data, status) {
-						 location.reload();
-					     },
-					     error: function (status) {
-						 // error handler
-						 console.log(status);
-					     }
-				  });
+				  alert($('#product-name').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + $('#desc').val()  );
+// 				    $.ajax({
+// 					     type: "PUT",
+// 					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
+// 					     dataType: "script",
+// 					     success: function (data, status) {
+// 						 location.reload();
+// 					     },
+// 					     error: function (status) {
+// 						 // error handler
+// 						 console.log(status);
+// 					     }
+// 				  });
 			  });
 				
 			});
