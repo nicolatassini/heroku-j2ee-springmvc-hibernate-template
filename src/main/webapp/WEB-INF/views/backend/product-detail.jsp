@@ -16,6 +16,7 @@
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/select2.min.css">
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/bootstrap-datetimepicker.min.css">
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/style.css">
+	<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
    </head>
 	<body>
 		<div class="main-wrapper">
@@ -35,44 +36,50 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Tên sản phẩm</label>
-												<input class="form-control" id="product-name" value="${product.name}" type="text">
+												<input class="form-control" id="product-name" type="text" value = "${product.name}">
 											</div>
 										</div>
-										<div class="col-sm-12">
-											<div class="show-fixed-amount">
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label>Thể loại</label>
-														<select class="form-control select" id="category">
-															<option value=""> -- Không -- </option>
-															<c:forEach items="${categoryList}" var="v_cate">
-																<option value="${v_cate.id}">${v_cate.name}</option>
-															</c:forEach>
-														</select>
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label>Nhãn hiệu</label>
-														<select class="form-control select" id="brand">
-															<option value=""> -- Không -- </option>
-															<c:forEach items="${brandList}" var="v_brand">
-																<option value="${v_brand.id}">${v_brand.name}</option>
-															</c:forEach>
-														</select>
-													</div>
-												</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Link đại diện sản phẩm</label>
+												<input class="form-control" id="product-image" type="text">
 											</div>
 										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Thể loại</label>
+												<select class="form-control select" id="category">
+													<option value=""> -- Không -- </option>
+													<c:forEach items="${categoryList}" var="v_cate">
+														<option value="${v_cate.id}">${v_cate.name}</option>
+													</c:forEach>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Nhãn hiệu</label>
+												<select class="form-control select" id="brand">
+													<option value=""> -- Không -- </option>
+													<c:forEach items="${brandList}" var="v_brand">
+														<option value="${v_brand.id}">${v_brand.name}</option>
+													</c:forEach>
+												</select>
+											</div>
+										</div>
+											
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label>Mô tả</label>
-												<textarea class="form-control" rows="4" cols="50"></textarea>
+												<textarea class="form-control" rows="4" cols="50" id="desc" name="desc"></textarea>
+												<script>
+													CKEDITOR.replace( 'desc' );
+												</script>
 											</div>
 										</div>
 									</div>
 									<div class="m-t-20 text-center">
-										<button class="btn btn-primary submit-btn">Lưu</button>
+										<button class="btn btn-primary submit-btn save-btn">Lưu</button>
 									</div>
 								</form>
 							</div>
@@ -84,14 +91,26 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-			  $(".saveCate").click(function(e){
+			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				    $.ajax({
+				  var data = {
+					    name: $('#product-name').val(),
+					    image: $('#product-image').val(),
+					    categoryId: $('#category').find('option:selected').val(),
+					    brandId: $('#brand').find('option:selected').val(),
+					    description: CKEDITOR.instances.desc.getData(),
+					}  
+				  $.ajax({
 					     type: "PUT",
-					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
+					     url: "${pageContext.request.contextPath}/admin/api/product",
+					     headers: { 
+						'Accept': 'application/json',
+						'Content-Type': 'application/json' 
+					     },
 					     dataType: "script",
+					     data: JSON.stringify(data),
 					     success: function (data, status) {
-						 location.reload();
+						  location.href = "${pageContext.request.contextPath}/admin/product";
 					     },
 					     error: function (status) {
 						 // error handler
