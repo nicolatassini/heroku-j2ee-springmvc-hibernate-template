@@ -110,8 +110,7 @@
 					     dataType: "script",
 					     data: JSON.stringify(data),
 					     success: function (data, status) {
-						  alert(data);
-// 						 location.reload();
+						  location.href = "${pageContext.request.contextPath}/admin/product";
 					     },
 					     error: function (status) {
 						 // error handler
