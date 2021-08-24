@@ -15,7 +15,7 @@ public class ProductDao {
 	private EntityManager entityManager;
 	
 	public Product find(Integer id) {
-		Product p = entityManager.find(Product.class, id)
+		Product p = entityManager.find(Product.class, id);
 		if(null != p.getBrandId()){
 				Brand brand = entityManager.find(Brand.class, p.getBrandId());
 				p.setBrand(brand.getName());
