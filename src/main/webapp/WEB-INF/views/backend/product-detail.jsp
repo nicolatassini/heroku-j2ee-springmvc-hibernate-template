@@ -41,6 +41,9 @@
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
+												<img class="rounded-circle" src="${product.image}" height="28" width="28" alt="">
+											</div>
+											<div class="form-group">
 												<label>Link đại diện sản phẩm</label>
 												<input class="form-control" id="product-image" type="text" value = "${product.image}">
 											</div>
