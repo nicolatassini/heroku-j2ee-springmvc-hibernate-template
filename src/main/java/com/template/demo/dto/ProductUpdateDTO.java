@@ -22,22 +22,6 @@ public class ProductUpdateDTO  {
 		this.image = image;
 	}
 	
-	public Integer getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(Integer categoryId) {
-		this.categoryId = categoryId;
-	}
-	
-	public Integer getBrandId() {
-		return brandId;
-	}
-
-	public void setBrandId(Integer brandId) {
-		this.brandId = brandId;
-	}
-	
 	public Integer getId() {
 		return id;
 	}
