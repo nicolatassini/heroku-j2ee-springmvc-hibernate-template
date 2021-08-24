@@ -38,25 +38,22 @@
 												<label>Mã sản phẩm</label>
 												<input class="form-control" id="product-id" type="text" value = "${product.id}" readonly>
 											</div>
-										</div>
-										<div class="col-sm-6">
-											<div class="form-group">
-												<label>Tên sản phẩm</label>
-												<input class="form-control" id="product-name" type="text" value = "${product.name}">
-											</div>
-										</div>
-										<div class="col-sm-6">
 											<div class="form-group">
 												<img class="rounded-circle" src="${product.image}" height="28" width="28" alt="">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
+												<label>Tên sản phẩm</label>
+												<input class="form-control" id="product-name" type="text" value = "${product.name}">
+											</div>
+											<div class="form-group">
+												<img class="rounded-circle" src="${product.image}" height="28" width="28" alt="">
+											</div>
+											<div class="form-group">
 												<label>Link đại diện sản phẩm</label>
 												<input class="form-control" id="product-image" type="text" value = "${product.image}">
 											</div>
-										</div>
-										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Thể loại</label>
 												<select class="form-control select" id="category">
@@ -66,8 +63,6 @@
 													</c:forEach>
 												</select>
 											</div>
-										</div>
-										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Nhãn hiệu</label>
 												<select class="form-control select" id="brand">
