@@ -16,6 +16,7 @@
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/select2.min.css">
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/bootstrap-datetimepicker.min.css">
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/style.css">
+	<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
    </head>
 	<body>
 		<div class="main-wrapper">
@@ -65,7 +66,7 @@
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label>Mô tả</label>
-												<textarea class="form-control" rows="4" cols="50" id="desc"></textarea>
+												<textarea class="form-control" rows="4" cols="50" name="desc"></textarea>
 												<script>
 													CKEDITOR.replace( 'desc' );
 												</script>
