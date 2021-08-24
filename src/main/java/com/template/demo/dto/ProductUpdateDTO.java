@@ -22,20 +22,20 @@ public class ProductUpdateDTO  {
 		this.image = image;
 	}
 	
-	public String getCategory() {
-		return category;
+	public Integer getCategoryId() {
+		return categoryId;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
 	}
 	
-	public String getBrand() {
-		return brand;
+	public Integer getBrandId() {
+		return brandId;
 	}
 
-	public void setBrand(String brand) {
-		this.brand = brand;
+	public void setBrandId(Integer brandId) {
+		this.brandId = brandId;
 	}
 	
 	public Integer getId() {
