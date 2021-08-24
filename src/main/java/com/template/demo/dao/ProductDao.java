@@ -60,6 +60,6 @@ public class ProductDao {
 		} else {
 			return entityManager.merge(product);
 		}		
-	}	
+	}
 	
 }
