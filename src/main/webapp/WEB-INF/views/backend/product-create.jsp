@@ -74,7 +74,9 @@
 												<textarea class="form-control" rows="4" cols="50" id="desc" name="desc"></textarea>
 												<script>
 													CKEDITOR.addCss('.cke_editable p { margin: 0 !important; }');
-													CKEDITOR.replace( 'desc' );
+													CKEDITOR.replace( 'desc', {
+														enterMode: CKEDITOR.ENTER_BR
+													    } );
 												</script>
 											</div>
 										</div>
