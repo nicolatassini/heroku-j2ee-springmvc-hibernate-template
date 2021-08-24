@@ -8,3 +8,4 @@
 <script src="${pageContext.request.contextPath}/resources/assets/js/moment.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/assets/js/bootstrap-datetimepicker.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/assets/js/app.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
