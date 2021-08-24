@@ -107,7 +107,7 @@
 						'Accept': 'application/json',
 						'Content-Type': 'application/json' 
 					     },
-					     dataType: "json",
+					     dataType: "script",
 					     data: JSON.stringify(data),
 					     success: function (data, status) {
 						  alert(data);
