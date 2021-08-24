@@ -93,19 +93,26 @@
 			$(document).ready(function(){
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				  alert($('#product-name').val() + "-" $('#product-image').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + CKEDITOR.instances.desc.getData()  );
-// 				    $.ajax({
-// 					     type: "PUT",
-// 					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
-// 					     dataType: "script",
-// 					     success: function (data, status) {
-// 						 location.reload();
-// 					     },
-// 					     error: function (status) {
-// 						 // error handler
-// 						 console.log(status);
-// 					     }
-// 				  });
+				  var data = {
+					    name: $('#product-name').val(),
+					    image: $('#product-image').val(),
+					    categoryId: $('#category').find('option:selected').val(),
+					    brandId: $('#brand').find('option:selected').val(),
+					    description: CKEDITOR.instances.desc.getData(),
+					}  
+				  $.ajax({
+					     type: "PUT",
+					     url: "${pageContext.request.contextPath}/admin/api/product",
+					     dataType: "script",
+					     data: JSON.stringify(data),
+					     success: function (data, status) {
+						 location.reload();
+					     },
+					     error: function (status) {
+						 // error handler
+						 console.log(status);
+					     }
+				  });
 			  });
 				
 			});
