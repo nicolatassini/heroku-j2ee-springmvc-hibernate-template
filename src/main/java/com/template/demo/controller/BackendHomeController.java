@@ -79,6 +79,14 @@ public class BackendHomeController extends BaseController implements Serializabl
 		Product product = productDao.find(id);
 		model.addAttribute("product", product);
 		model.addAttribute("productActive", "active");
+		
+		List<Brand> brandList = brandDao.getList();
+		model.addAttribute("brandList", brandList);
+		
+		
+		List<Category> categoryList = categoryDao.getCategories();
+		model.addAttribute("categoryList", categoryList);
+		
 		return "backend/product-detail";
 	}
 	
