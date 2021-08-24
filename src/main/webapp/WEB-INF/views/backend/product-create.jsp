@@ -38,32 +38,30 @@
 												<input class="form-control" id="product-name" type="text">
 											</div>
 										</div>
-										<div class="col-sm-12">
-											<div class="show-fixed-amount">
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label>Thể loại</label>
-														<select class="form-control select" id="category">
-															<option value=""> -- Không -- </option>
-															<c:forEach items="${categoryList}" var="v_cate">
-																<option value="${v_cate.id}">${v_cate.name}</option>
-															</c:forEach>
-														</select>
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label>Nhãn hiệu</label>
-														<select class="form-control select" id="brand">
-															<option value=""> -- Không -- </option>
-															<c:forEach items="${brandList}" var="v_brand">
-																<option value="${v_brand.id}">${v_brand.name}</option>
-															</c:forEach>
-														</select>
-													</div>
-												</div>
+									
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Thể loại</label>
+												<select class="form-control select" id="category">
+													<option value=""> -- Không -- </option>
+													<c:forEach items="${categoryList}" var="v_cate">
+														<option value="${v_cate.id}">${v_cate.name}</option>
+													</c:forEach>
+												</select>
 											</div>
 										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Nhãn hiệu</label>
+												<select class="form-control select" id="brand">
+													<option value=""> -- Không -- </option>
+													<c:forEach items="${brandList}" var="v_brand">
+														<option value="${v_brand.id}">${v_brand.name}</option>
+													</c:forEach>
+												</select>
+											</div>
+										</div>
+											
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label>Mô tả</label>
