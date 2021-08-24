@@ -213,7 +213,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@ResponseBody
 	public String updateProduct(@RequestBody ProductUpdateDTO productDto ) {
 		logger.info("====> [Backend] Brand update: " + productDto.toString());
-		
+		productDao.save(productDto);
 		return "success";
 	}
 	
