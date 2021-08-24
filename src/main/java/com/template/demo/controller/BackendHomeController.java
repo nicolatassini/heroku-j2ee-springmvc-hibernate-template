@@ -75,10 +75,10 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 */
 	@RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
 	public String prdDetail(Model model, @PathVariable Integer id) {
-		logger.info("====> [Backend] Brand detail page!!");
-		Brand brand = brandDao.find(id);
-		model.addAttribute("brand", brand);
-		model.addAttribute("brandActive", "active");
+		logger.info("====> [Backend] Product detail page!!");
+		Product product = productDao.find(id);
+		model.addAttribute("product", product);
+		model.addAttribute("productActive", "active");
 		return "backend/product-detail";
 	}
 	
