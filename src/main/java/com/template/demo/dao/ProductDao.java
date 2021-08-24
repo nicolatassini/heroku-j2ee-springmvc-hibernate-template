@@ -45,7 +45,7 @@ public class ProductDao {
 				.setParameter("productId", p.getId())
 				.getResultList();
 								      
-			if(imageList.site() > 0){
+			if(imageList.size() > 0){
 				p.setImage(imageList.get(0).getLink());
 			}				
 		}
