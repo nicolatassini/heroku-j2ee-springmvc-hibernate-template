@@ -103,7 +103,11 @@
 				  $.ajax({
 					     type: "PUT",
 					     url: "${pageContext.request.contextPath}/admin/api/product",
-					     dataType: "script",
+					     headers: { 
+						'Accept': 'application/json',
+						'Content-Type': 'application/json' 
+					     },
+					     dataType: "json",
 					     data: JSON.stringify(data),
 					     success: function (data, status) {
 						 location.reload();
