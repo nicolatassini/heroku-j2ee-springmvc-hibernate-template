@@ -110,7 +110,7 @@
 					     dataType: "json",
 					     data: JSON.stringify(data),
 					     success: function (data, status) {
-						  console.log(data);
+						  alert(data);
 // 						 location.reload();
 					     },
 					     error: function (status) {
