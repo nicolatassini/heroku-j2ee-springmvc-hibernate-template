@@ -75,6 +75,13 @@ public class BackendHomeController extends BaseController implements Serializabl
 	@RequestMapping(value = "/product/add", method = RequestMethod.GET)
 	public String productCreate(Model model) {
 		logger.info("====> [Backend] Create product page!!");
+		
+		List<Brand> brandList = brandDao.getList();
+		model.addAttribute("brandList", brandList);
+		
+		List<Category> categoryList = categoryDao.getCategories();
+		model.addAttribute("categoryList", categoryList);
+		
 		model.addAttribute("productActive", "active");
 		return "backend/product-create";
 	}
