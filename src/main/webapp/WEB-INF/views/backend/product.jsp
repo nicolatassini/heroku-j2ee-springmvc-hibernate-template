@@ -74,7 +74,7 @@
 											<th>Tên sản phẩm</th>
 											<th>Thể loại</th>
 											<th>Nhãn hiệu</th>
-											<th>Mô tả</th>
+<!-- 											<th>Mô tả</th> -->
 											<th class="text-right">Hoạt động</th>
 										</tr>
 									</thead>
@@ -94,9 +94,9 @@
 											<td>
 												${v_product.brand}
 											</td>
-											<td>
+<!-- 											<td>
 												${v_product.description}
-											</td>
+											</td> -->
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
