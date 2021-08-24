@@ -66,7 +66,7 @@
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label>Mô tả</label>
-												<textarea class="form-control" rows="4" cols="50" id="desc"></textarea>
+												<textarea class="form-control" rows="4" cols="50" id="desc" name="desc"></textarea>
 												<script>
 													CKEDITOR.replace( 'desc' );
 												</script>
@@ -88,7 +88,7 @@
 			$(document).ready(function(){
 			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				  alert($('#product-name').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + CKEDITOR.instances.desc.getData();  );
+				  alert($('#product-name').val() + "-" + $('#category').find('option:selected').val() + "-" + $('#brand').find('option:selected').val() + "-" + CKEDITOR.instances.desc.getData()  );
 // 				    $.ajax({
 // 					     type: "PUT",
 // 					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
