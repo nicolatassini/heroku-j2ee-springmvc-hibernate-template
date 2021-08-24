@@ -41,7 +41,7 @@ public class ProductDao {
 				Category category = entityManager.find(Category.class, p.getCategoryId());
 				p.setCategory(category.getName());
 			}
-			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productId = :productId)
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productId = :productId")
 				.setParameter("productId", p.getId())
 				.getResultList();
 								      
