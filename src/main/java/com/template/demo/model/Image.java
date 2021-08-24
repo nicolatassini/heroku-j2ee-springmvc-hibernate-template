@@ -17,13 +17,13 @@ public class Image extends BaseEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    	private Integer id;
 
 	@Column
-    private Long productId;
+    	private Integer productId;
 
 	@Column
-	private Long productTypeId;
+	private Integer productTypeId;
 
 	@Column(length = 20000)
 	private String link;
@@ -36,19 +36,19 @@ public class Image extends BaseEntity implements Serializable {
 		this.id = id;
 	}
 
-	public Long getProductId() {
+	public Integer getProductId() {
 		return productId;
 	}
 
-	public void setProductId(Long productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
-	public Long getProductTypeId() {
+	public Integer getProductTypeId() {
 		return productTypeId;
 	}
 
-	public void setProductTypeId(Long productTypeId) {
+	public void setProductTypeId(Integer productTypeId) {
 		this.productTypeId = productTypeId;
 	}
 
