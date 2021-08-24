@@ -23,7 +23,6 @@ public class Product extends BaseEntity implements Serializable {
 	@Column(length=10000)
     private String name;
 
-	@Column(length=10000)
 	private String description;
 
 	@Column
