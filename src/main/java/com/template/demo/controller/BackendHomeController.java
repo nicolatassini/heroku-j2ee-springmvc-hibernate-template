@@ -209,7 +209,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
-	@RequestMapping(value = "/api/product", method = RequestMethod.PUT, consumes="application/json")
+	@RequestMapping(value = "/api/product", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
 	@ResponseBody
 	public String updateProduct(@RequestBody ProductUpdateDTO productDto ) {
 		logger.info("====> [Backend] Brand update: " + productDto.toString());
