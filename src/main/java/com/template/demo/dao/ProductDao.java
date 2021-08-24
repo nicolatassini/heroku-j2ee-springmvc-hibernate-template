@@ -59,8 +59,19 @@ public class ProductDao {
 			Image image = new Image();
 			image.setProductId(productNew.getId());
 			image.setLink(product.getImage());
+			entityManager.persist(image);
 			return product;
 		} else {
+			
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productId = :productId")
+				.setParameter("productId", product.getId())
+				.getResultList();
+								      
+			if(imageList.size() > 0){
+				Image image = imageList.get(0);
+				image.setLink(product.getImage());
+				entityManager.merge(image);
+			}
 			return entityManager.merge(product);
 		}		
 	}
