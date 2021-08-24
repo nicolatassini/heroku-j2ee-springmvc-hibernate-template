@@ -109,7 +109,7 @@
 					    image: $('#product-image').val(),
 					    categoryId: $('#category').find('option:selected').val(),
 					    brandId: $('#brand').find('option:selected').val(),
-					    description: CKEDITOR.instances.desc.getData(),
+					    description: CKEDITOR.instances.desc.getData().replace(/\s+/g, ' ').trim(),
 					}  
 				  $.ajax({
 					     type: "PUT",
