@@ -42,7 +42,7 @@ public class ProductDao {
 				p.setCategory(category.getName());
 			}
 			Image image = entityManager.createQuery("select c from Image c where c.productId = :productId)
-				.setParameter("productId", categoryId)
+				.setParameter("productId", p.getId())
 				.getSingleResult();
 			
 			p.setImage(image.getLink());					
