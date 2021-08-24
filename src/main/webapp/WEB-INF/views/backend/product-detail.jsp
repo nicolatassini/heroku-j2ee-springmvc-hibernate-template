@@ -36,7 +36,7 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Mã sản phẩm</label>
-												<input class="form-control" id="product-id" type="text" value = "${product.id} readonly">
+												<input class="form-control" id="product-id" type="text" value = "${product.id}" readonly>
 											</div>
 										</div>
 										<div class="col-sm-6">
