@@ -2,6 +2,7 @@ package com.template.demo.controller;
 
 import com.template.demo.model.*;
 import com.template.demo.dao.*;
+import com.template.demo.dto.*;
 import java.io.Serializable;
 import java.util.*;
 import org.slf4j.Logger;
@@ -210,12 +211,9 @@ public class BackendHomeController extends BaseController implements Serializabl
 	 */
 	@RequestMapping(value = "/api/brand", method = RequestMethod.PUT, produces="application/json")
 	@ResponseBody
-	public String updateProduct(@RequestParam(required=false) Integer id, @RequestParam String name ) {
-		logger.info("====> [Backend] Brand update: " + id + name);
-		Brand brand = new Brand();
-		brand.setId(id);
-		brand.setName(name);
-		brandDao.save(brand);
+	public String updateProduct(@RequestBody ProductUpdateDTO productDto ) {
+		logger.info("====> [Backend] Brand update: " + productDto.toString());
+		
 		return "success";
 	}
 	
