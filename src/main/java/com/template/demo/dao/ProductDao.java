@@ -21,6 +21,14 @@ public class ProductDao {
 	public void delete(Integer id) {
 		Product product = entityManager.find(Product.class, id);
 		entityManager.remove(product);
+		List<Image> imageList = entityManager.createQuery("select c from Image c where c.productId = :productId")
+				.setParameter("productId", product.getId())
+				.getResultList();
+								      
+		if(imageList.size() > 0){
+			Image image = imageList.get(0);
+			entityManager.remove(image);
+		}
 	}
 	
 	@SuppressWarnings("unchecked")
