@@ -39,7 +39,7 @@
 												<input class="form-control" id="product-id" type="text" value = "${product.id}" readonly>
 											</div>
 											<div class="form-group">
-												<img class="rounded-circle" src="${product.image}" height="28" width="28" alt="">
+												<img class="rounded" src="${product.image}" height="250" alt="">
 											</div>
 										</div>
 										<div class="col-sm-6">
