@@ -31,7 +31,7 @@
 										<h4 class="page-title">Chi tiết sản phẩm</h4>
 									</div>
 									<div class="col-sm-6 text-center">
-										<a href="${pageContext.request.contextPath}/admin/product/type/${product.id}">
+										<a href="${pageContext.request.contextPath}/admin/product/${product.id}/type">
 											<button class="btn btn-success btn-block">Loại sản phẩm</button>
 										</a>
 									</div>
