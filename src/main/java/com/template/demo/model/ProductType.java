@@ -21,13 +21,13 @@ public class ProductType extends BaseEntity implements Serializable {
     private Integer id;
 
 	@Column
-	private Long productId;
+	private Integer productId;
 
 	@Column(length=10000)
     private String productTypeName;
 
 	@Column
-    private Long stock;
+    private Integer stock;
 
 	@Column
     private BigDecimal price;
@@ -40,11 +40,11 @@ public class ProductType extends BaseEntity implements Serializable {
 		this.id = id;
 	}
 
-	public Long getProductId() {
+	public Integer getProductId() {
 		return productId;
 	}
 
-	public void setProductId(Long productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
@@ -56,11 +56,11 @@ public class ProductType extends BaseEntity implements Serializable {
 		this.productTypeName = productTypeName;
 	}
 
-	public Long getStock() {
+	public Integer getStock() {
 		return stock;
 	}
 
-	public void setStock(Long stock) {
+	public void setStock(Integer stock) {
 		this.stock = stock;
 	}
 
