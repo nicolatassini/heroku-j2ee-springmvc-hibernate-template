@@ -26,11 +26,15 @@
 					<div class="content">
 						<div class="row">
 							<div class="col-lg-8 offset-lg-2">
-								<div class="col-sm-6">
-									<h4 class="page-title">Chi tiết sản phẩm</h4>
-								</div>
-								<div class="col-sm-6 text-center">
-									<button class="btn btn-primary submit-btn">Loại sản phẩm</button>
+								<div class="row">
+									<div class="col-sm-6">
+										<h4 class="page-title">Chi tiết sản phẩm</h4>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="${pageContext.request.contextPath}/admin/product/type/${product.id}">
+											<button class="btn btn-success btn-block">Loại sản phẩm</button>
+										</a>
+									</div>
 								</div>
 								
 							</div>
