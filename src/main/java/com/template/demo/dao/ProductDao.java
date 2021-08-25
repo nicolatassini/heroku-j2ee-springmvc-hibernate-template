@@ -137,7 +137,7 @@ public class ProductDao {
 	}
 	
 	@Transactional
-	public Product saveType(ProductType productType) {
+	public ProductType saveType(ProductType productType) {
 		if (productType.getId() == null) {
 			entityManager.persist(productType);
 			entityManager.flush();
@@ -145,7 +145,7 @@ public class ProductDao {
 			image.setProductTypeId(productType.getId());
 			image.setLink(productType.getImage());
 			entityManager.persist(image);
-			return product;
+			return productType;
 		} else {
 			
 			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productTypeId = :productTypeId")
@@ -158,7 +158,7 @@ public class ProductDao {
 				entityManager.merge(image);
 			}
 			
-			return entityManager.merge(product);
+			return entityManager.merge(productType);
 		}		
 	}
 	
