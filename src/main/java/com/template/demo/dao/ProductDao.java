@@ -33,6 +33,23 @@ public class ProductDao {
 			}
 		return p;
 	}
+	
+	
+	
+	@Transactional
+	public void deleteType(Integer id) {
+		ProductType productType = entityManager.find(ProductType.class, id);
+		entityManager.remove(productType);
+		List<Image> imageList = entityManager.createQuery("select c from Image c where c.productTypeId = :productTypeId")
+				.setParameter("productTypeId", productType.getId())
+				.getResultList();
+								      
+		if(imageList.size() > 0){
+			Image image = imageList.get(0);
+			entityManager.remove(image);
+		}
+	}
+	
 	@Transactional
 	public void delete(Integer id) {
 		Product product = entityManager.find(Product.class, id);
@@ -76,6 +93,23 @@ public class ProductDao {
 		return productList;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public List<ProductType> getAllType(Integer productId) {
+		List<ProductType> productTypeList = entityManager.createQuery("select c from ProductType c where c.productId = :productId")
+				.setParameter("productId", productId)
+				.getResultList();
+		for(ProductType p: productTypeList){
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productTypeId = :productTypeId")
+				.setParameter("productTypeId", p.getId())
+				.getResultList();
+								      
+			if(imageList.size() > 0){
+				p.setImage(imageList.get(0).getLink());
+			}				
+		}
+		return productTypeList;
+	}
+	
 	@Transactional
 	public Product save(Product product) {
 		if (product.getId() == null) {
@@ -95,6 +129,32 @@ public class ProductDao {
 			if(imageList.size() > 0){
 				Image image = imageList.get(0);
 				image.setLink(product.getImage());
+				entityManager.merge(image);
+			}
+			
+			return entityManager.merge(product);
+		}		
+	}
+	
+	@Transactional
+	public Product saveType(ProductType productType) {
+		if (productType.getId() == null) {
+			entityManager.persist(productType);
+			entityManager.flush();
+			Image image = new Image();
+			image.setProductTypeId(productType.getId());
+			image.setLink(productType.getImage());
+			entityManager.persist(image);
+			return product;
+		} else {
+			
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productTypeId = :productTypeId")
+				.setParameter("productTypeId", productType.getId())
+				.getResultList();
+								      
+			if(imageList.size() > 0){
+				Image image = imageList.get(0);
+				image.setLink(productType.getImage());
 				entityManager.merge(image);
 			}
 			
