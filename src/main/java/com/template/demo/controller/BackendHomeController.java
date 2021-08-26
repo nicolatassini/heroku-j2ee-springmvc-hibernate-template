@@ -278,6 +278,29 @@ public class BackendHomeController extends BaseController implements Serializabl
 		return "success";
 	}
 	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/api/product/type/{id}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public String deleteProdType(Model model, @PathVariable Integer id) {
+		logger.info("====> [Backend] Product delete: " + id);
+		productDao.deleteType(id);
+		return "success";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
+	@RequestMapping(value = "/api/product/type", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
+	@ResponseBody
+	public String updateProduct(@RequestBody ProductType productDto ) {
+		logger.info("====> [Backend] Product type update");
+		
+		productDao.saveType(productDto);
+		return "success";
+	}
+	
 	
 	
 }
