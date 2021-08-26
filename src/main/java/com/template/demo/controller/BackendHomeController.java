@@ -61,6 +61,22 @@ public class BackendHomeController extends BaseController implements Serializabl
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
+	@RequestMapping(value = "/product/type/{id}", method = RequestMethod.GET)
+	public String productTypeDetail(Model model, @PathVariable Integer id) {
+		logger.info("====> [Backend] Product type detail page!!");
+		ProductType productTypeList = productDao.findType(id);
+		
+		model.addAttribute("productId", id);
+		
+		model.addAttribute("productType", productTypeList);
+		model.addAttribute("productActive", "active");
+		
+		return "backend/product-type-detail";
+	}
+	
+	/**
+	 * Selects the home page and populates the model with a message
+	 */
 	@RequestMapping(value = "/product/{id}/type/add", method = RequestMethod.GET)
 	public String productTypeCreate(Model model, @PathVariable Integer id) {
 		logger.info("====> [Backend] Create type product page!!");
