@@ -66,7 +66,7 @@
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<div class="dropdown-menu dropdown-menu-right action-product" data-id="${v_product.id}">
-														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/product/${v_product.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
+														<a class="dropdown-item" href="${pageContext.request.contextPath}/admin/product/type/${v_product.id}"><i class="fa fa-pencil m-r-5"></i> Sửa</a>
 														<a class="dropdown-item" href="#" data-toggle="modal"  data-target="#delete_product"><i class="fa fa-trash-o m-r-5"></i> Xoá</a>
 													</div>
 												</div>
@@ -99,12 +99,6 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-				 $(".btn-search-product").click(function(){
-					window.location.href = "${pageContext.request.contextPath}/admin/product?name=" + $(".product-name").val() + "&categoryId=" + $('.select-category').find('option:selected').val() + "&brandId="+$('.select-brand').find('option:selected').val();
-				 });
-				
-				$(".select-category").val("${categoryId}").change();
-				$(".select-brand").val("${brandId}").change();
 				
 				$(".action-product").click(function(){
 					$('#delete_product').attr("data-delete",$(this).attr("data-id"));
@@ -114,7 +108,7 @@
 			  $(".delete_product_submit").click(function(){
 				    $.ajax({
 				     type: "DELETE",
-				     url: "${pageContext.request.contextPath}/admin/api/product/" + $("#delete_product").attr("data-delete"),
+				     url: "${pageContext.request.contextPath}/admin/api/product/type/" + $("#delete_product").attr("data-delete"),
 // 				     contentType: "application/json; charset=utf-8",
 // 				     crossDomain: true,
 // 				     dataType: "json",
