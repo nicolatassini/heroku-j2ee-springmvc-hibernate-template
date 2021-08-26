@@ -24,10 +24,10 @@
 				<div class="page-wrapper">
 					<div class="content">
 						<div class="row">
-							<div class="col-lg-8 offset-lg-2">
+							<div class="col-sm-8 col-lg-6 offset-lg-6">
 								<h4 class="page-title">Thêm loại sản phẩm</h4>
 							</div>
-							<div class="col-sm-4 col-3 text-right m-b-30">
+							<div class="col-sm-4 col-lg-6 offset-lg-6 ">
 								<a href="${pageContext.request.contextPath}/admin/product/${productId}" class="btn btn-warning btn-block">Quay lại</a>
 							</div>
 						</div>
