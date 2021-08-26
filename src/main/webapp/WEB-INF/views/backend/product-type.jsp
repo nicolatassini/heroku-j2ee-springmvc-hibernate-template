@@ -29,9 +29,13 @@
 						<div class="col-sm-4 col-5">
 							<h4 class="page-title">Danh sách loại sản phẩm</h4>
 						</div>
-						<div class="col-sm-8 col-7 text-right m-b-30">
-							<a href="${pageContext.request.contextPath}/admin/product/${productId}/type/add" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i>Thêm loại hàng</a>
+						<div class="col-sm-4 col-3 text-right m-b-30">
+							<a href="${pageContext.request.contextPath}/admin/product/${productId}" class="btn btn-default btn-rounded float-right"><i class="fa fa-plus"></i>Quay lại</a>
 						</div>
+						<div class="col-sm-4 col-4 text-right m-b-30">
+							<a href="${pageContext.request.contextPath}/admin/product/${productId}/type/add" class="btn btn-success btn-rounded float-right"><i class="fa fa-plus"></i>Thêm loại hàng</a>
+						</div>
+						
 					</div>
 					<div class="row">
 						<div class="col-md-12">
