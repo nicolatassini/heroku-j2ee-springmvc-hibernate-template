@@ -37,33 +37,29 @@
 								<table class="table table-striped custom-table datatable">
 									<thead>
 										<tr>
-											<th style="width:5%;">Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Thể loại</th>
-											<th>Nhãn hiệu</th>
-<!-- 											<th>Mô tả</th> -->
+											<th style="width:5%;">Mã loại</th>
+											<th>Tên loại</th>
+											<th>Đơn giá</th>
+											<th>Số lượng còn lại</th>
 											<th class="text-right">Hoạt động</th>
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach items="${productList}" var="v_product">
+										<c:forEach items="${productTypeList}" var="v_product">
 										<tr>
 											<td>
 												${v_product.id}
 											</td>
 											<td>
 												<img class="rounded-circle" src="${v_product.image}" height="28" width="28" alt="">
-												${v_product.name}
+												${v_product.productTypeName}
 											</td>
 											<td>
-												${v_product.category}
+												${v_product.price}
 											</td>
 											<td>
-												${v_product.brand}
+												${v_product.stock}
 											</td>
-<!-- 											<td>
-												${v_product.description}
-											</td> -->
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
