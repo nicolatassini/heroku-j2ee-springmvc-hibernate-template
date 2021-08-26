@@ -30,7 +30,7 @@
 							<h4 class="page-title">Danh sách loại sản phẩm</h4>
 						</div>
 						<div class="col-sm-4 col-3 text-right m-b-30">
-							<a href="${pageContext.request.contextPath}/admin/product/${productId}" class="btn btn-default btn-block"><i class="fa fa-plus"></i>Quay lại</a>
+							<a href="${pageContext.request.contextPath}/admin/product/${productId}" class="btn btn-warning btn-block">Quay lại</a>
 						</div>
 						<div class="col-sm-4 col-4 text-right m-b-30">
 							<a href="${pageContext.request.contextPath}/admin/product/${productId}/type/add" class="btn btn-success btn-block"><i class="fa fa-plus"></i>Thêm loại hàng</a>
