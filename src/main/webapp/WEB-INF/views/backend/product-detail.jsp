@@ -48,6 +48,9 @@
 												<label>Mã loại</label>
 												<input class="form-control" id="product-id" type="text" value = "${product.id}" readonly>
 											</div>
+											<div class="form-group">
+												<img class="rounded" style="border: 2px solid #ccc;padding: 5px;max-width: 100%;max-height:100%;" src="${product.image}" >
+											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
