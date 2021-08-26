@@ -34,6 +34,18 @@ public class ProductDao {
 		return p;
 	}
 	
+	public ProductType findType(Integer id) {
+		ProductType p = entityManager.find(ProductType.class, id);
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productTypeId = :productTypeId")
+				.setParameter("productTypeId", p.getId())
+				.getResultList();
+								      
+			if(imageList.size() > 0){
+				p.setImage(imageList.get(0).getLink());
+			}
+		return p;
+	}
+	
 	
 	
 	@Transactional
