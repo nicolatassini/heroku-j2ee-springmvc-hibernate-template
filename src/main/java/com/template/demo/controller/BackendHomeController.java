@@ -66,7 +66,7 @@ public class BackendHomeController extends BaseController implements Serializabl
 		logger.info("====> [Backend] Product type detail page!!");
 		ProductType productTypeList = productDao.findType(id);
 		
-		model.addAttribute("productId", id);
+		model.addAttribute("productId", productTypeList.getProductId());
 		
 		model.addAttribute("productType", productTypeList);
 		model.addAttribute("productActive", "active");
