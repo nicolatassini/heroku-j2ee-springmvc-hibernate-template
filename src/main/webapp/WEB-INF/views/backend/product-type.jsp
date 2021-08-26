@@ -41,7 +41,7 @@
 											<th>Tên loại</th>
 											<th>Đơn giá</th>
 											<th>Số lượng còn lại</th>
-											<th class="text-right">Hoạt động</th>
+											<th style="width:5%;" class="text-right">Hoạt động</th>
 										</tr>
 									</thead>
 									<tbody>
