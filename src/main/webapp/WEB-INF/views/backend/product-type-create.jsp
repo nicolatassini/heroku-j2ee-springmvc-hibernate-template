@@ -58,7 +58,7 @@
 										</div>
 									</div>
 									<div class="m-t-20 text-center">
-										<button class="btn btn-primary submit-btn">Lưu</button>
+										<button class="btn btn-primary submit-btn save-btn">Lưu</button>
 									</div>
 								</form>
 							</div>
@@ -70,14 +70,26 @@
 		<%@ include file="b_footer.jsp" %>
 		<script>
 			$(document).ready(function(){
-			  $(".saveCate").click(function(e){
+			  $(".save-btn").click(function(e){
 				e.preventDefault();
-				    $.ajax({
+				  var data = {
+					    productId: "${productId}",
+					    productTypeName: $('#product-type-name').val(),
+					    stock: $('#stock').val(),
+					    image: $('#image-link').val(),
+					    price: $('#price').val()
+					}  
+				  $.ajax({
 					     type: "PUT",
-					     url: "${pageContext.request.contextPath}/admin/api/category?name="+$('#category-name').val(),
+					     url: "${pageContext.request.contextPath}/admin/api/product/type",
+					     headers: { 
+						'Accept': 'application/json',
+						'Content-Type': 'application/json' 
+					     },
 					     dataType: "script",
+					     data: JSON.stringify(data),
 					     success: function (data, status) {
-						 location.reload();
+						  location.href = "${pageContext.request.contextPath}/admin/product/${productId}/type";
 					     },
 					     error: function (status) {
 						 // error handler
