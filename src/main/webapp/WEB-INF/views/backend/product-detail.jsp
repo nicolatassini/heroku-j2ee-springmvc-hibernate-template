@@ -87,12 +87,13 @@
 												<textarea class="form-control" rows="10" cols="50" id="desc" name="desc"></textarea>
 												<script>
 													CKEDITOR.addCss('.cke_editable p { margin: 0 !important; }');
-													CKEDITOR.replace( 'desc', {
-														extraPlugins : '#AADC6E',
+													//<![CDATA[
+													CKEDITOR.replace( 'desc',
+													{
+														extraPlugins : 'uicolor',
 														height: '800px',
-														language: 'vi',
-													});
-													
+													} );
+													//]]>
 												</script>
 											</div>
 										</div>
