@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
    <head>
@@ -194,7 +195,7 @@
                                           <div class="caption cntr" stype="height: 100px;">
                                              <p>${v_pro.brand}</p>
                                              <p>${v_pro.category}</p>
-                                             <p><strong>${v_pro.price}</strong></p>
+                                             <p><strong><fmt:formatNumber type = "number" pattern = "#,### VNĐ" value = "${v_pro.price}" /></strong></p>
                                              <h4><a class="shopBtn" href="#" title="add to cart"> Thêm vào giỏ hàng </a></h4>
                                           </div>
                                        </div>
