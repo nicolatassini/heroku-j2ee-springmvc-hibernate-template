@@ -106,13 +106,14 @@ public class ProductDao {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Product> getList(String name, Integer categoryId, Integer brandId, Integer max) {
+	public List<Product> getList(String name, Integer categoryId, Integer brandId, Integer first, Integer record) {
 		
 		List<Product> productList = entityManager.createQuery("select c from Product c where 1=1 AND (:name = '' OR lower(c.name) like lower(concat('%', :name,'%'))) AND (:categoryId = -1 OR c.categoryId = :categoryId) AND (:brandId = -1 OR c.brandId = :brandId) ORDER BY c.lastModifiedDate DESC, c.createdDate DESC")
 			.setParameter("name", name)
 			.setParameter("categoryId", categoryId)
 			.setParameter("brandId", brandId)
-			.setMaxResults(max)
+			.setMaxResults(record)
+			.setFirstResult(first == null? 0 : first);
 			.getResultList();
 		
 		for(Product p: productList){
