@@ -131,7 +131,9 @@
                                              <div class="thumbnail">
                                                 <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
                                                 <a href="#" class="tag"></a>
-                                                <a href="${pageContext.request.contextPath}/product/${v_pro.id}"><img src="${v_pro.image}" alt="bootstrap-ring"></a>
+                                                <a href="${pageContext.request.contextPath}/product/${v_pro.id}" style="height: 130px; display: flex;" >
+                                                   <img src="${v_pro.image}" alt="bootstrap-ring">
+                                                </a>
                                              </div>
                                           </li>
                                        </c:forEach>
@@ -149,7 +151,9 @@
                                              <div class="thumbnail">
                                                 <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
                                                 <a href="#" class="tag"></a>
-                                                <a href="${pageContext.request.contextPath}/product/${v_pro.id}"><img src="${v_pro.image}" alt="bootstrap-ring"></a>
+                                                <a href="${pageContext.request.contextPath}/product/${v_pro.id}" style="height: 130px; display: flex;" >
+                                                   <img src="${v_pro.image}" alt="bootstrap-ring">
+                                                </a>
                                              </div>
                                           </li>
                                        </c:forEach>
@@ -167,7 +171,9 @@
                                              <div class="thumbnail">
                                                 <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
                                                 <a href="#" class="tag"></a>
-                                                <a href="${pageContext.request.contextPath}/product/${v_pro.id}"><img src="${v_pro.image}" alt="bootstrap-ring"></a>
+                                                <a href="${pageContext.request.contextPath}/product/${v_pro.id}" style="height: 130px; display: flex;" >
+                                                   <img src="${v_pro.image}" alt="bootstrap-ring">
+                                                </a>
                                              </div>
                                           </li>
                                        </c:forEach>
