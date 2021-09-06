@@ -1,10 +1,47 @@
 <div class="well well-small">
-   <ul class="nav nav-list">
+   <ul class="nav nav-list menu-left">
       <c:forEach items="${categoryList}" var="v_cate">
          <li><a href="${pageContext.request.contextPath}?categoryId=${v_cate.id}"><span class="icon-chevron-right"></span>${v_cate.name}</a></li>
       </c:forEach>
    </ul>
 </div>
+ <script>
+			$(document).ready(function(){
+            var categoryId = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0];
+            $("li a").attr("selected","selected");
+			 
+// 			  $(".save-btn").click(function(e){
+// 				e.preventDefault();
+// 				  var data = {
+// 					    id: $('#product-id').val(),
+// 					    name: $('#product-name').val(),
+// 					    image: $('#product-image').val(),
+// 					    categoryId: $('#category').find('option:selected').val(),
+// 					    brandId: $('#brand').find('option:selected').val(),
+// 					    description: CKEDITOR.instances.desc.getData().replace(/\s+/g, ' ').trim(),
+// 					}  
+// 				  $.ajax({
+// 					     type: "PUT",
+// 					     url: "${pageContext.request.contextPath}/admin/api/product",
+// 					     headers: { 
+// 						'Accept': 'application/json',
+// 						'Content-Type': 'application/json' 
+// 					     },
+// 					     dataType: "script",
+// 					     data: JSON.stringify(data),
+// 					     success: function (data, status) {
+// 						  location.href = "${pageContext.request.contextPath}/admin/product";
+// 					     },
+// 					     error: function (status) {
+// 						 // error handler
+// 						 console.log(status);
+// 					     }
+// 				  });
+// 			  });
+				
+			});
+		    
+		</script>
 <!-- <div class="well well-small alert alert-warning cntr">
    <h2>50% Discount</h2>
    <p>
