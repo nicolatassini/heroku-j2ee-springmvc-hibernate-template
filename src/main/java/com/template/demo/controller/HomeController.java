@@ -41,8 +41,12 @@ public class HomeController extends BaseController implements Serializable {
 		List<Category> categoryList = categoryDao.getCategories();
 		model.addAttribute("categoryList", categoryList);
 		
-		List<Product> productNewList = productDao.getList(name,categoryId, brandId, 12);
-		model.addAttribute("productNewList", productNewList);
+		List<Product> productIcons1 = productDao.getList(name,categoryId, brandId, 0, 4);
+		List<Product> productIcons2 = productDao.getList(name,categoryId, brandId, 4, 4);
+		List<Product> productIcons3 = productDao.getList(name,categoryId, brandId, 8, 4);
+		model.addAttribute("productIcons1", productIcons1);
+		model.addAttribute("productIcons2", productIcons2);
+		model.addAttribute("productIcons3", productIcons3);
 		
 		return "home";
 	}
