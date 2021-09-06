@@ -36,7 +36,7 @@
                      <div class="span5">
                         <div id="myCarousel" class="carousel slide cntr">
                            <div class="carousel-inner">
-                              <div class="item" style="height: 320px; justify-content: center; display: flex; border: 1px solid #ccc; padding: 5px; align-items: center;">
+                              <div class="item" style="height: 351px; justify-content: center; display: flex; border: 1px solid #f89406; padding: 5px; align-items: center;">
                                  <a href="${product.image}"> <img src="${product.image}" alt="" style="width:100%"></a>
                               </div>
                            </div>
