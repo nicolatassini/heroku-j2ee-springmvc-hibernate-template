@@ -1,7 +1,7 @@
 package com.template.demo.controller;
 
-import com.template.demo.dao.CategoryDao;
-import com.template.demo.model.Category;
+import com.template.demo.model.*;
+import com.template.demo.dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.*;
@@ -26,15 +26,15 @@ public class ProductDetailController extends BaseController implements Serializa
 			.getLogger(ProductDetailController.class);
 
 	@Autowired
-	private CategoryDao categoryDao;
+	private ProductDao productDao;
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
 	@RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
-	public String home(Model model, @PathVariable(required = false) Long id) {
+	public String home(Model model, @PathVariable(required = false) Integer id) {
 		logger.info("product!");
-		List<Category> categoryList = categoryDao.getCategories();
-		model.addAttribute("categoryList", categoryList);
+		Product product = productDao.find(id);
+		model.addAttribute("product", product);
 		return "detail";
 	}
 
