@@ -36,14 +36,8 @@
                      <div class="span5">
                         <div id="myCarousel" class="carousel slide cntr">
                            <div class="carousel-inner">
-                              <div class="item active">
-                                 <a href="#"> <img src="${pageContext.request.contextPath}/resources/img/a.jpg" alt="" style="width:100%"></a>
-                              </div>
                               <div class="item">
-                                 <a href="#"> <img src="${pageContext.request.contextPath}/resources/img/b.jpg" alt="" style="width:100%"></a>
-                              </div>
-                              <div class="item">
-                                 <a href="#"> <img src="${pageContext.request.contextPath}/resources/img/e.jpg" alt="" style="width:100%"></a>
+                                 <a href="#"> <img src="${product.image}" alt="" style="width:100%"></a>
                               </div>
                            </div>
                         </div>
