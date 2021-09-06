@@ -106,6 +106,36 @@ public class ProductDao {
 	}
 	
 	@SuppressWarnings("unchecked")
+	public List<Product> getList(String name, Integer categoryId, Integer brandId, Integer max) {
+		
+		List<Product> productList = entityManager.createQuery("select c from Product c where 1=1 AND (:name = '' OR lower(c.name) like lower(concat('%', :name,'%'))) AND (:categoryId = -1 OR c.categoryId = :categoryId) AND (:brandId = -1 OR c.brandId = :brandId) ORDER BY c.lastModifiedDate DESC, c.createdDate DESC")
+			.setParameter("name", name)
+			.setParameter("categoryId", categoryId)
+			.setParameter("brandId", brandId)
+			.setMaxResults(max)
+			.getResultList();
+		
+		for(Product p: productList){
+			if(null != p.getBrandId()){
+				Brand brand = entityManager.find(Brand.class, p.getBrandId());
+				p.setBrand(brand.getName());
+			}
+			if(null != p.getCategoryId()){
+				Category category = entityManager.find(Category.class, p.getCategoryId());
+				p.setCategory(category.getName());
+			}
+			List<Image> imageList = entityManager.createQuery("select c from Image c where c.productId = :productId")
+				.setParameter("productId", p.getId())
+				.getResultList();
+								      
+			if(imageList.size() > 0){
+				p.setImage(imageList.get(0).getLink());
+			}				
+		}
+		return productList;
+	}
+	
+	@SuppressWarnings("unchecked")
 	public List<ProductType> getAllType(Integer productId) {
 		List<ProductType> productTypeList = entityManager.createQuery("select c from ProductType c where c.productId = :productId")
 				.setParameter("productId", productId)
