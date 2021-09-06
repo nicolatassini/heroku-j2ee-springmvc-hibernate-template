@@ -37,15 +37,12 @@ public class HomeController extends BaseController implements Serializable {
 			   @RequestParam(defaultValue = "-1") Integer brandId
 			   ) {
 		logger.info("Welcome home!");
+		
 		List<Category> categoryList = categoryDao.getCategories();
-		for (Category category : categoryList) {
-			logger.info(category.getName());
-		}
 		model.addAttribute("categoryList", categoryList);
 		
-		List<Product> productList = productDao.getList(name,categoryId, brandId);
-		
-		model.addAttribute("productList", productList);
+		List<Product> productNewList = productDao.getList(name,categoryId, brandId, 12);
+		model.addAttribute("productNewList", productNewList);
 		
 		return "home";
 	}
