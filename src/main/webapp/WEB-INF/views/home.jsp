@@ -183,8 +183,8 @@
                   <div class="row-fluid">
                      <c:choose>
                           <c:when test="${not empty productNewTop12}">
-                              <c:forEach items="${productNewTop12}" var="v_pro">
-                                 <ul class="thumbnails">
+                             <ul class="thumbnails">
+                                 <c:forEach items="${productNewTop12}" var="v_pro">
                                     <li class="span4">
                                        <div class="thumbnail">
                                           <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="Thêm vào giỏ hàng"><span class="icon-search"></span>XEM NHANH</a>
@@ -198,8 +198,8 @@
                                           </div>
                                        </div>
                                     </li>
-                                 </ul>
-                              </c:forEach>
+                                 </c:forEach>
+                              </ul>
                           </c:when>
                      </c:choose>
                      
