@@ -88,8 +88,9 @@
 												<script>
 													CKEDITOR.addCss('.cke_editable p { margin: 0 !important; }');
 													CKEDITOR.replace( 'desc', {
-														extraPlugins : 'uicolor',
+														extraPlugins : '#AADC6E',
 														height: '800px',
+														language: 'vi',
 													});
 													
 												</script>
