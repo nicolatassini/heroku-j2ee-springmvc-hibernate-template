@@ -27,6 +27,9 @@ public class ProductDetailController extends BaseController implements Serializa
 
 	@Autowired
 	private ProductDao productDao;
+	
+	@Autowired
+	private CategoryDao categoryDao;
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
@@ -38,6 +41,10 @@ public class ProductDetailController extends BaseController implements Serializa
 		
 		List<ProductType> productType = productDao.getAllType(id);
 		model.addAttribute("productType", productType);
+		
+		List<Category> categoryList = categoryDao.getCategories();
+		model.addAttribute("categoryList", categoryList);
+		
 		return "detail";
 	}
 
