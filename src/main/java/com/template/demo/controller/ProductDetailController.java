@@ -36,7 +36,7 @@ public class ProductDetailController extends BaseController implements Serializa
 		Product product = productDao.find(id);
 		model.addAttribute("product", product);
 		
-		List<ProductType> productType = productDao.getAllType(Integer productId);
+		List<ProductType> productType = productDao.getAllType(id);
 		model.addAttribute("productType", productType);
 		return "detail";
 	}
