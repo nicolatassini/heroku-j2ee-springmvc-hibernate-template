@@ -36,8 +36,8 @@
                      <div class="span5">
                         <div id="myCarousel" class="carousel slide cntr">
                            <div class="carousel-inner">
-                              <div class="item">
-                                 <a href="#"> <img src="${product.image}" alt="" style="width:100%"></a>
+                              <div class="item" style="height: 320px; justify-content: center; display: flex; border: 1px solid #ccc; padding: 5px; align-items: center;">
+                                 <a href="${product.image}"> <img src="${product.image}" alt="" style="width:100%"></a>
                               </div>
                            </div>
                         </div>
@@ -49,7 +49,7 @@
                            <div class="control-group">
                               <label class="control-label"><span><fmt:formatNumber type = "number" pattern = "#,### VNĐ" value = "${product.price}" /></span></label>
                               <div class="controls">
-                                 <input type="number" class="span6" placeholder="Qty." va>
+                                 <input type="number" class="span6" placeholder="Qty.">
                               </div>
                            </div>
                            <div class="control-group">
@@ -64,17 +64,23 @@
                               </div>
                            </div>
                            <div class="control-group">
-                              <label class="control-label"><span>Materials</span></label>
+                              <label class="control-label"><span>Thể loại</span></label>
                               <div class="controls">
-                                 <select class="span11">
-                                    <option>Material 1</option>
-                                    <option>Material 2</option>
-                                    <option>Material 3</option>
-                                    <option>Material 4</option>
-                                 </select>
+                                 <input type="number" class="span6" value="${product.category}" readonly >
                               </div>
                            </div>
-                           <h4>Còn lại <span>${product.stock}</span></h4>
+                           <div class="control-group">
+                              <label class="control-label"><span>Nhãn hiệu</span></label>
+                              <div class="controls">
+                                 <input type="number" class="span6" value="${product.brand}" readonly >
+                              </div>
+                           </div>
+                           <div class="control-group">
+                              <label class="control-label"><span>Số lượng còn lại</span></label>
+                              <div class="controls">
+                                 <input type="number" class="span6" value="${product.stock}" readonly >
+                              </div>
+                           </div>
                            <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Thêm vào giỏ hàng</button>
                         </form>
                      </div>
