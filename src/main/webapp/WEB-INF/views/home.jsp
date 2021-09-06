@@ -14,6 +14,51 @@
       <!-- font awesome styles -->
       <link href="${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.css" rel="stylesheet">
       <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/ico/favicon.ico">
+      <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+      <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+      <script src="${pageContext.request.contextPath}/resources/js/jquery.easing-1.3.min.js"></script>
+      <script src="${pageContext.request.contextPath}/resources/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+      <script src="${pageContext.request.contextPath}/resources/js/shop.js"></script>
+      <script>
+         $(document).ready(function(){
+         var categoryId = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0];
+         $( ".menu-left li a" ).each(function( index ) {
+            if($( this ).attr('href') === '?' + categoryId){
+               $( this ).parent().attr('class', 'active');
+            }
+         });
+
+      // 			  $(".save-btn").click(function(e){
+      // 				e.preventDefault();
+      // 				  var data = {
+      // 					    id: $('#product-id').val(),
+      // 					    name: $('#product-name').val(),
+      // 					    image: $('#product-image').val(),
+      // 					    categoryId: $('#category').find('option:selected').val(),
+      // 					    brandId: $('#brand').find('option:selected').val(),
+      // 					    description: CKEDITOR.instances.desc.getData().replace(/\s+/g, ' ').trim(),
+      // 					}  
+      // 				  $.ajax({
+      // 					     type: "PUT",
+      // 					     url: "${pageContext.request.contextPath}/admin/api/product",
+      // 					     headers: { 
+      // 						'Accept': 'application/json',
+      // 						'Content-Type': 'application/json' 
+      // 					     },
+      // 					     dataType: "script",
+      // 					     data: JSON.stringify(data),
+      // 					     success: function (data, status) {
+      // 						  location.href = "${pageContext.request.contextPath}/admin/product";
+      // 					     },
+      // 					     error: function (status) {
+      // 						 // error handler
+      // 						 console.log(status);
+      // 					     }
+      // 				  });
+      // 			  });
+
+         });		    
+      </script>
    </head>
    <body>
       <div class="container">
@@ -337,50 +382,6 @@
       </div>
       <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
       <!-- Placed at the end of the document so the pages load faster -->
-      <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/js/jquery.easing-1.3.min.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/js/shop.js"></script>
-     <script>
-         $(document).ready(function(){
-         var categoryId = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0];
-         $( ".menu-left li a" ).each(function( index ) {
-            if($( this ).attr('href') === '?' + categoryId){
-               $( this ).parent().attr('class', 'active');
-            }
-         });
-
-      // 			  $(".save-btn").click(function(e){
-      // 				e.preventDefault();
-      // 				  var data = {
-      // 					    id: $('#product-id').val(),
-      // 					    name: $('#product-name').val(),
-      // 					    image: $('#product-image').val(),
-      // 					    categoryId: $('#category').find('option:selected').val(),
-      // 					    brandId: $('#brand').find('option:selected').val(),
-      // 					    description: CKEDITOR.instances.desc.getData().replace(/\s+/g, ' ').trim(),
-      // 					}  
-      // 				  $.ajax({
-      // 					     type: "PUT",
-      // 					     url: "${pageContext.request.contextPath}/admin/api/product",
-      // 					     headers: { 
-      // 						'Accept': 'application/json',
-      // 						'Content-Type': 'application/json' 
-      // 					     },
-      // 					     dataType: "script",
-      // 					     data: JSON.stringify(data),
-      // 					     success: function (data, status) {
-      // 						  location.href = "${pageContext.request.contextPath}/admin/product";
-      // 					     },
-      // 					     error: function (status) {
-      // 						 // error handler
-      // 						 console.log(status);
-      // 					     }
-      // 				  });
-      // 			  });
-
-         });		    
-      </script>
+      
    </body>
 </html>
