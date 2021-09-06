@@ -36,8 +36,10 @@ public class ProductDao {
 			.setParameter("productId", p.getId())
 			.getResultList();
 
-		if(productTypeList.size() > 0){
+		if (productTypeList.size() > 0){
 			p.setPrice(productTypeList.get(0).getPrice());
+		} else {
+			p.setPrice(0);
 		}
 		return p;
 	}
@@ -116,6 +118,8 @@ public class ProductDao {
 								      
 			if(productTypeList.size() > 0){
 				p.setPrice(productTypeList.get(0).getPrice());
+			} else {
+				p.setPrice(0);
 			}
 		}
 		return productList;
@@ -155,6 +159,8 @@ public class ProductDao {
 								      
 			if(productTypeList.size() > 0){
 				p.setPrice(productTypeList.get(0).getPrice());
+			} else {
+				p.setPrice(0);
 			}
 		}
 		return productList;
