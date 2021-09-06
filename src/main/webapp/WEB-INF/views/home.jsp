@@ -188,9 +188,10 @@
                                     <li class="span4">
                                        <div class="thumbnail">
                                           <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="Thêm vào giỏ hàng"><span class="icon-search"></span>XEM NHANH</a>
-                                          <a href="${pageContext.request.contextPath}/product/${v_pro.id}">
-                                          <img src="${v_pro.image}" alt="${v_pro.name}"></a>
-                                          <div class="caption cntr">
+                                          <a href="${pageContext.request.contextPath}/product/${v_pro.id}" style="height: 200px; display: flex;">
+                                             <img src="${v_pro.image}" alt="${v_pro.name}">
+                                          </a>
+                                          <div class="caption cntr" stype="height: 100px;">
                                              <p>${v_pro.brand}</p>
                                              <p>${v_pro.category}</p>
                                              <p><strong>${v_pro.price}</strong></p>
