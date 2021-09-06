@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <html>
    <head>
       <meta charset="utf-8">
@@ -44,18 +46,16 @@
                                  <a href="#"> <img src="${pageContext.request.contextPath}/resources/img/e.jpg" alt="" style="width:100%"></a>
                               </div>
                            </div>
-                           <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-                           <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
                         </div>
                      </div>
                      <div class="span7">
-                        <h3>Name of the Item [$140.00]</h3>
+                        <h3>${product.name} [${product.type}]</h3>
                         <hr class="soft"/>
                         <form class="form-horizontal qtyFrm">
                            <div class="control-group">
-                              <label class="control-label"><span>$140.00</span></label>
+                              <label class="control-label"><span><fmt:formatNumber type = "number" pattern = "#,### VNĐ" value = "${product.price}" /></span></label>
                               <div class="controls">
-                                 <input type="number" class="span6" placeholder="Qty.">
+                                 <input type="number" class="span6" placeholder="Qty." va>
                               </div>
                            </div>
                            <div class="control-group">
@@ -80,11 +80,8 @@
                                  </select>
                               </div>
                            </div>
-                           <h4>100 items in stock</h4>
-                           <p>Nowadays the lingerie industry is one of the most successful business spheres.
-                              Nowadays the lingerie industry is one of ...
-                           <p>
-                              <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
+                           <h4>Còn lại <span>${product.stock}</span></h4>
+                           <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Thêm vào giỏ hàng</button>
                         </form>
                      </div>
                   </div>
