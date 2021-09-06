@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.math.BigDecimal;
 
 @Repository
 public class ProductDao {
@@ -39,7 +40,7 @@ public class ProductDao {
 		if (productTypeList.size() > 0){
 			p.setPrice(productTypeList.get(0).getPrice());
 		} else {
-			p.setPrice(0);
+			p.setPrice(BigDecimal.ZERO);
 		}
 		return p;
 	}
@@ -119,7 +120,7 @@ public class ProductDao {
 			if(productTypeList.size() > 0){
 				p.setPrice(productTypeList.get(0).getPrice());
 			} else {
-				p.setPrice(0);
+				p.setPrice(BigDecimal.ZERO);
 			}
 		}
 		return productList;
@@ -160,7 +161,7 @@ public class ProductDao {
 			if(productTypeList.size() > 0){
 				p.setPrice(productTypeList.get(0).getPrice());
 			} else {
-				p.setPrice(0);
+				p.setPrice(BigDecimal.ZERO);
 			}
 		}
 		return productList;
