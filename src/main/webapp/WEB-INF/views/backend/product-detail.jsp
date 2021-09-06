@@ -88,6 +88,13 @@
 												<script>
 													CKEDITOR.addCss('.cke_editable p { margin: 0 !important; }');
 													CKEDITOR.replace( 'desc' );
+													CKEDITOR.editorConfig = function( config )
+													{
+													    // Define changes to default configuration here. For example:
+													    config.language = 'vi';
+													    config.uiColor = '#AADC6E';
+													    config.height = '800px';
+													};
 												</script>
 											</div>
 										</div>
