@@ -39,7 +39,7 @@ public class HomeController extends BaseController implements Serializable {
 		}
 		model.addAttribute("categoryList", categoryList);
 		
-		List<Product> productList = productDao.getList("",categoryId, -1l);
+		List<Product> productList = productDao.getList("",categoryId, -1);
 		
 		model.addAttribute("productList", productList);
 		
