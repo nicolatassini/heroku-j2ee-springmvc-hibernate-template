@@ -5,10 +5,13 @@
       </c:forEach>
    </ul>
 </div>
- <script>
-			$(document).ready(function(){
-            var categoryId = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0];
-            $("li a").attr("selected","selected");
+<script>
+	$(document).ready(function(){
+	var categoryId = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0];
+	$( ".menu-left li a" ).each(function( index ) {
+	  console.log( index + ": " + $( this ).text() );
+	});
+        $("li a").attr("selected","selected");
 			 
 // 			  $(".save-btn").click(function(e){
 // 				e.preventDefault();
@@ -39,9 +42,9 @@
 // 				  });
 // 			  });
 				
-			});
-		    
-		</script>
+	});		    
+</script>
+
 <!-- <div class="well well-small alert alert-warning cntr">
    <h2>50% Discount</h2>
    <p>
