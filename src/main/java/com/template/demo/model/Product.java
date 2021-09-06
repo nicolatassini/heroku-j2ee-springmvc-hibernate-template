@@ -46,6 +46,9 @@ public class Product extends BaseEntity implements Serializable {
 	@Transient
 	private String type;
 	
+	@Transient
+	private Integer stock;
+	
 	public BigDecimal getPrice() {
 		return price;
 	}
@@ -124,5 +127,13 @@ public class Product extends BaseEntity implements Serializable {
 
 	public void setBrandId(Integer brandId) {
 		this.brandId = brandId;
+	}
+	
+	public Integer getStock() {
+		return stock;
+	}
+
+	public void setStock(Integer stock) {
+		this.stock = stock;
 	}
 }
