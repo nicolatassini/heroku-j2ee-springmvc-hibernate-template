@@ -121,6 +121,7 @@
                         <div class="carousel-inner">
                            <div class="item active">
                               <ul class="thumbnails">
+                                 
                                  <li class="span3">
                                     <div class="thumbnail">
                                        <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
@@ -128,6 +129,7 @@
                                        <a href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/bootstrap-ring.png" alt="bootstrap-ring"></a>
                                     </div>
                                  </li>
+                                 
                                  <li class="span3">
                                     <div class="thumbnail">
                                        <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
@@ -143,6 +145,18 @@
                                     </div>
                                  </li>
                                  <li class="span3">
+                                    <div class="thumbnail">
+                                       <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+                                       <a  href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/s.png" alt=""></a>
+                                    </div>
+                                 </li>
+                                  <li class="span3">
+                                    <div class="thumbnail">
+                                       <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+                                       <a  href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/s.png" alt=""></a>
+                                    </div>
+                                 </li>
+                                  <li class="span3">
                                     <div class="thumbnail">
                                        <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
                                        <a  href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/s.png" alt=""></a>
