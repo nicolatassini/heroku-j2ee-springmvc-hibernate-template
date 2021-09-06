@@ -31,7 +31,11 @@ public class HomeController extends BaseController implements Serializable {
 	 * Selects the home page and populates the model with a message
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model, @RequestParam(defaultValue = "-1") Integer categoryId) {
+	public String home(Model model, 
+			   @RequestParam(defaultValue = "-1") Integer categoryId, 
+			   @RequestParam(defaultValue = "") String name,
+			   @RequestParam(defaultValue = "-1") Integer brandId
+			   ) {
 		logger.info("Welcome home!");
 		List<Category> categoryList = categoryDao.getCategories();
 		for (Category category : categoryList) {
@@ -39,7 +43,7 @@ public class HomeController extends BaseController implements Serializable {
 		}
 		model.addAttribute("categoryList", categoryList);
 		
-		List<Product> productList = productDao.getList("",categoryId, -1);
+		List<Product> productList = productDao.getList(name,categoryId, brandId);
 		
 		model.addAttribute("productList", productList);
 		
