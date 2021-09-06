@@ -346,9 +346,10 @@
          $(document).ready(function(){
          var categoryId = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0];
          $( ".menu-left li a" ).each(function( index ) {
-           console.log( index + ": " + $( this ).text() );
+            if($( this ).attr('href') === '?' + categoryId){
+               $( this ).parent().attr('class', 'active');
+            }
          });
-              $("li a").attr("selected","selected");
 
       // 			  $(".save-btn").click(function(e){
       // 				e.preventDefault();
