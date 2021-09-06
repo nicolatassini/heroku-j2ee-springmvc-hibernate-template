@@ -135,9 +135,6 @@
                                     </ul>
                                  </div>
                                 </c:when>
-                                <c:otherwise>
-                                  Không có sản phẩm
-                                </c:otherwise>
                            </c:choose>
                            
                            <c:choose>
