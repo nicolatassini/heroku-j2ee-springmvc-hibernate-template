@@ -48,7 +48,7 @@
                         <form class="form-horizontal qtyFrm">
                            <div class="control-group">
                               <label class="control-label"><span><fmt:formatNumber type = "number" pattern = "#,### VNĐ" value = "${product.price}" /></span></label>
-                              <div class="controls">
+                              <div class="controls" style="width: 100%;">
                                  <input type="number" class="span6" placeholder="Qty.">
                               </div>
                            </div>
@@ -65,20 +65,20 @@
                            </div>
                            <div class="control-group">
                               <label class="control-label"><span>Thể loại</span></label>
-                              <div class="controls">
+                              <div class="controls" style="width: 100%;">
                                  <input type="text" class="span6" value="${product.category}" readonly >
                               </div>
                            </div>
                            <div class="control-group">
                               <label class="control-label"><span>Nhãn hiệu</span></label>
-                              <div class="controls">
+                              <div class="controls" style="width: 100%;">
                                  <input type="text" class="span6" value="${product.brand}" readonly >
                               </div>
                            </div>
                            <div class="control-group">
                               <label class="control-label"><span>Số lượng còn lại</span></label>
-                              <div class="controls">
-                                 <input type="text" class="span6" value="${product.stock}" readonly >
+                              <div class="controls" style="width: 100%;">
+                                 <input type="number" class="span6" value="${product.stock}" readonly >
                               </div>
                            </div>
                            <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Thêm vào giỏ hàng</button>
@@ -99,35 +99,8 @@
                   </ul> -->
                   <div id="myTabContent" class="tab-content tabWrapper">
                      <div class="tab-pane fade active in" id="home">
-                        <h4>Product Information</h4>
-                        <table class="table table-striped">
-                           <tbody>
-                              <tr class="techSpecRow">
-                                 <td class="techSpecTD1">Color:</td>
-                                 <td class="techSpecTD2">Black</td>
-                              </tr>
-                              <tr class="techSpecRow">
-                                 <td class="techSpecTD1">Style:</td>
-                                 <td class="techSpecTD2">Apparel,Sports</td>
-                              </tr>
-                              <tr class="techSpecRow">
-                                 <td class="techSpecTD1">Season:</td>
-                                 <td class="techSpecTD2">spring/summer</td>
-                              </tr>
-                              <tr class="techSpecRow">
-                                 <td class="techSpecTD1">Usage:</td>
-                                 <td class="techSpecTD2">fitness</td>
-                              </tr>
-                              <tr class="techSpecRow">
-                                 <td class="techSpecTD1">Sport:</td>
-                                 <td class="techSpecTD2">122855031</td>
-                              </tr>
-                              <tr class="techSpecRow">
-                                 <td class="techSpecTD1">Brand:</td>
-                                 <td class="techSpecTD2">Shock Absorber</td>
-                              </tr>
-                           </tbody>
-                        </table>
+                        <h3>THÔNG TIN SẢN PHẨM</h3>
+                        <hr>
                         <c:out value="${product.description}" escapeXml="false"/>
                      </div>
                   </div>
