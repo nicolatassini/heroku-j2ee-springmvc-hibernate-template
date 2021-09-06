@@ -1,6 +1,6 @@
 <div class="header">
 	<div class="header-left">
-		<a href="${pageContext.request.contextPath}" class="logo">
+		<a href="${pageContext.request.contextPath}/" class="logo">
 			<img src="${pageContext.request.contextPath}/resources/assets/img/logo.png" width="35" height="35" alt=""> <span>Preclinic</span>
 		</a>
 	</div>
