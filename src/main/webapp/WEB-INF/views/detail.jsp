@@ -81,7 +81,7 @@
                                  <input type="number" class="span6" value="${product.stock}" readonly >
                               </div>
                            </div>
-                           <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Thêm vào giỏ hàng</button>
+                           <button type="submit" class="shopBtn" style="width: 371px;"><span class=" icon-shopping-cart"></span> Thêm vào giỏ hàng</button>
                         </form>
                      </div>
                   </div>
