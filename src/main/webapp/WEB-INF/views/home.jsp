@@ -179,56 +179,28 @@
                      </div>
                   </div>
                   <div class="row-fluid">
-                     <ul class="thumbnails">
-                        <li class="span4">
-                           <div class="thumbnail">
-                              <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                              <a href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/b.jpg" alt=""></a>
-                              <div class="caption cntr">
-                                 <p>Manicure & Pedicure</p>
-                                 <p><strong> $22.00</strong></p>
-                                 <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
-                                 <div class="actionList">
-                                    <a class="pull-left" href="#">Add to Wish List </a>
-                                    <a class="pull-left" href="#"> Add to Compare </a>
-                                 </div>
-                                 <br class="clr">
-                              </div>
-                           </div>
-                        </li>
-                        <li class="span4">
-                           <div class="thumbnail">
-                              <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                              <a href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/c.jpg" alt=""></a>
-                              <div class="caption cntr">
-                                 <p>Manicure & Pedicure</p>
-                                 <p><strong> $22.00</strong></p>
-                                 <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
-                                 <div class="actionList">
-                                    <a class="pull-left" href="#">Add to Wish List </a>
-                                    <a class="pull-left" href="#"> Add to Compare </a>
-                                 </div>
-                                 <br class="clr">
-                              </div>
-                           </div>
-                        </li>
-                        <li class="span4">
-                           <div class="thumbnail">
-                              <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                              <a href="product_details.html"><img src="${pageContext.request.contextPath}/resources/img/a.jpg" alt=""></a>
-                              <div class="caption cntr">
-                                 <p>Manicure & Pedicure</p>
-                                 <p><strong> $22.00</strong></p>
-                                 <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
-                                 <div class="actionList">
-                                    <a class="pull-left" href="#">Add to Wish List </a>
-                                    <a class="pull-left" href="#"> Add to Compare </a>
-                                 </div>
-                                 <br class="clr">
-                              </div>
-                           </div>
-                        </li>
-                     </ul>
+                     <c:choose>
+                          <c:when test="${not empty productNewTop12}">
+                              <c:forEach items="${productNewTop12}" var="v_pro">
+                                 <ul class="thumbnails">
+                                    <li class="span4">
+                                       <div class="thumbnail">
+                                          <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+                                          <a href="${pageContext.request.contextPath}/product/${v_pro.id}">
+                                          <img src="${v_pro.image}" alt="${v_pro.name}"></a>
+                                          <div class="caption cntr">
+                                             <p>Manicure & Pedicure</p>
+                                             <p><strong> $22.00</strong></p>
+                                             <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
+                                             <br class="clr">
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </c:forEach>
+                          </c:when>
+                     </c:choose>
+                     
                   </div>
                </div>
                <!--
