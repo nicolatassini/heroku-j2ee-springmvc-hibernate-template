@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <html>
    <head>
       <meta charset="utf-8">
@@ -185,13 +187,14 @@
                                  <ul class="thumbnails">
                                     <li class="span4">
                                        <div class="thumbnail">
-                                          <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+                                          <a class="zoomTool" href="${pageContext.request.contextPath}/product/${v_pro.id}" title="add to cart"><span class="icon-search"></span>XEM NHANH</a>
                                           <a href="${pageContext.request.contextPath}/product/${v_pro.id}">
                                           <img src="${v_pro.image}" alt="${v_pro.name}"></a>
                                           <div class="caption cntr">
-                                             <p>Manicure & Pedicure</p>
-                                             <p><strong> $22.00</strong></p>
-                                             <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
+                                             <p>${v_pro.brand}</p>
+                                             <p>${v_pro.category}</p>
+                                             <p><strong>${v_pro.price}</strong></p>
+                                             <h4><a class="shopBtn" href="#" title="add to cart"> Thêm vào giỏ hàng </a></h4>
                                              <br class="clr">
                                           </div>
                                        </div>
