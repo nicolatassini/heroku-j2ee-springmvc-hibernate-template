@@ -39,9 +39,13 @@ public class ProductDao {
 
 		if (productTypeList.size() > 0){
 			p.setPrice(productTypeList.get(0).getPrice());
+			p.setType(productTypeList.get(0).getProductTypeName());
 		} else {
 			p.setPrice(BigDecimal.ZERO);
+			p.setType("NAN");
 		}
+		
+		
 		return p;
 	}
 	
