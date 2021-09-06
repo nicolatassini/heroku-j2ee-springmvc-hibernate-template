@@ -100,7 +100,15 @@ public class ProductDao {
 								      
 			if(imageList.size() > 0){
 				p.setImage(imageList.get(0).getLink());
-			}				
+			}
+			
+			List<ProductType> productTypeList = entityManager.createQuery("select c from ProductType c where c.productId = :productId")
+				.setParameter("productId", p.getId())
+				.getResultList();
+								      
+			if(productTypeList.size() > 0){
+				p.setPrice(productTypeList.get(0).getPrice());
+			}
 		}
 		return productList;
 	}
@@ -134,7 +142,7 @@ public class ProductDao {
 			}
 			
 			List<ProductType> productTypeList = entityManager.createQuery("select c from ProductType c where c.productId = :productId")
-				.setParameter("productId", productId)
+				.setParameter("productId", p.getId())
 				.getResultList();
 								      
 			if(productTypeList.size() > 0){
