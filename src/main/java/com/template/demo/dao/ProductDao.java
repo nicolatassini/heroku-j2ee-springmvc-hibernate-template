@@ -113,7 +113,7 @@ public class ProductDao {
 			.setParameter("categoryId", categoryId)
 			.setParameter("brandId", brandId)
 			.setMaxResults(record)
-			.setFirstResult(first == null? 0 : first);
+			.setFirstResult(first == null? 0 : first)
 			.getResultList();
 		
 		for(Product p: productList){
